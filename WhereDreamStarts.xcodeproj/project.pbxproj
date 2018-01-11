@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39741246F8FDA7B73051AA8C /* libPods-WhereDreamStarts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5246F11A01DF2BE89BED15A /* libPods-WhereDreamStarts.a */; };
 		9DDA4F7E2007436C00EC8C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F7D2007436C00EC8C35 /* main.m */; };
 		9DDA4F812007436C00EC8C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F802007436C00EC8C35 /* AppDelegate.m */; };
 		9DDA4F842007436C00EC8C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F832007436C00EC8C35 /* ViewController.m */; };
@@ -61,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C2FD1B2F5745D100890D92E /* Pods-WhereDreamStarts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereDreamStarts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereDreamStarts/Pods-WhereDreamStarts.debug.xcconfig"; sourceTree = "<group>"; };
+		99AFFF054D1A973B4E41A863 /* Pods-WhereDreamStarts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereDreamStarts.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereDreamStarts/Pods-WhereDreamStarts.release.xcconfig"; sourceTree = "<group>"; };
 		9DDA4F792007436C00EC8C35 /* WhereDreamStarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereDreamStarts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDA4F7D2007436C00EC8C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DDA4F7F2007436C00EC8C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		9DDA4FEF2007524B00EC8C35 /* PeopleIsChildCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleIsChildCenter.m; sourceTree = "<group>"; };
 		9DDA4FF12007590400EC8C35 /* myHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myHeadView.h; sourceTree = "<group>"; };
 		9DDA4FF22007590400EC8C35 /* myHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myHeadView.m; sourceTree = "<group>"; };
+		C5246F11A01DF2BE89BED15A /* libPods-WhereDreamStarts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhereDreamStarts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39741246F8FDA7B73051AA8C /* libPods-WhereDreamStarts.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		911DFF91121A03ADC5B4B9AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C2FD1B2F5745D100890D92E /* Pods-WhereDreamStarts.debug.xcconfig */,
+				99AFFF054D1A973B4E41A863 /* Pods-WhereDreamStarts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9DDA4F702007436C00EC8C35 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +159,8 @@
 				9DDA4F952007436C00EC8C35 /* WhereDreamStartsTests */,
 				9DDA4FA02007436C00EC8C35 /* WhereDreamStartsUITests */,
 				9DDA4F7A2007436C00EC8C35 /* Products */,
+				911DFF91121A03ADC5B4B9AC /* Pods */,
+				ABBF627182679A232793331F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,6 +274,14 @@
 			name = "个人中心";
 			sourceTree = "<group>";
 		};
+		ABBF627182679A232793331F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5246F11A01DF2BE89BED15A /* libPods-WhereDreamStarts.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,9 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DDA4FA62007436C00EC8C35 /* Build configuration list for PBXNativeTarget "WhereDreamStarts" */;
 			buildPhases = (
+				9DDB527342DFCD016BF500D7 /* [CP] Check Pods Manifest.lock */,
 				9DDA4F752007436C00EC8C35 /* Sources */,
 				9DDA4F762007436C00EC8C35 /* Frameworks */,
 				9DDA4F772007436C00EC8C35 /* Resources */,
+				C1EC83BFE9771B966337254B /* [CP] Embed Pods Frameworks */,
+				CF261323DC9E1026729210F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -403,6 +430,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DDB527342DFCD016BF500D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhereDreamStarts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1EC83BFE9771B966337254B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhereDreamStarts/Pods-WhereDreamStarts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF261323DC9E1026729210F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WhereDreamStarts/Pods-WhereDreamStarts-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhereDreamStarts/Pods-WhereDreamStarts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9DDA4F752007436C00EC8C35 /* Sources */ = {
@@ -566,6 +647,7 @@
 		};
 		9DDA4FA72007436C00EC8C35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C2FD1B2F5745D100890D92E /* Pods-WhereDreamStarts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WhereDreamStarts/Info.plist;
@@ -578,6 +660,7 @@
 		};
 		9DDA4FA82007436C00EC8C35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99AFFF054D1A973B4E41A863 /* Pods-WhereDreamStarts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WhereDreamStarts/Info.plist;
