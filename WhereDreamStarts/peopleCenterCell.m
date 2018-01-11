@@ -28,6 +28,12 @@
         //[_button sd_setImageWithURL:[NSURL URLWithString:@"http://www.jituwang.com/uploads/allimg/150203/258887-1502031KP212.jpg"] forState:UIControlStateNormal];
         [_button setImage:[UIImage imageNamed:@"icon_wendao_name"] forState:UIControlStateNormal];
         
+        UIImageView *img=[[UIImageView alloc]init];
+        img.image=[UIImage imageNamed:@"icon_right"];
+        [self.contentView addSubview:img];
+        img.sd_layout.rightSpaceToView(self.contentView, 10).topSpaceToView(self.contentView, 14).widthIs(22).heightIs(22);
+        
+        
     }
     return self;
 }

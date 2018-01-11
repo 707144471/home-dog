@@ -43,6 +43,9 @@
 		9DDA4FF02007524B00EC8C35 /* PeopleIsChildCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4FEF2007524B00EC8C35 /* PeopleIsChildCenter.m */; };
 		9DDA4FF32007590400EC8C35 /* myHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4FF22007590400EC8C35 /* myHeadView.m */; };
 		9DDA4FF7200764DA00EC8C35 /* peopleCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4FF6200764DA00EC8C35 /* peopleCenterCell.m */; };
+		9DDA4FFC20076C5E00EC8C35 /* icon_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDA4FF920076C5E00EC8C35 /* icon_right.png */; };
+		9DDA4FFD20076C5E00EC8C35 /* icon_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDA4FFA20076C5E00EC8C35 /* icon_right@2x.png */; };
+		9DDA4FFE20076C5E00EC8C35 /* icon_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDA4FFB20076C5E00EC8C35 /* icon_right@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +121,9 @@
 		9DDA4FF4200762F400EC8C35 /* MyPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPrefixHeader.pch; sourceTree = "<group>"; };
 		9DDA4FF5200764DA00EC8C35 /* peopleCenterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleCenterCell.h; sourceTree = "<group>"; };
 		9DDA4FF6200764DA00EC8C35 /* peopleCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleCenterCell.m; sourceTree = "<group>"; };
+		9DDA4FF920076C5E00EC8C35 /* icon_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_right.png; sourceTree = "<group>"; };
+		9DDA4FFA20076C5E00EC8C35 /* icon_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_right@2x.png"; sourceTree = "<group>"; };
+		9DDA4FFB20076C5E00EC8C35 /* icon_right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_right@3x.png"; sourceTree = "<group>"; };
 		C5246F11A01DF2BE89BED15A /* libPods-WhereDreamStarts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhereDreamStarts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -269,6 +275,7 @@
 		9DDA4FEA2007518100EC8C35 /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
+				9DDA4FF820076C5000EC8C35 /* image */,
 				9DDA4FEB2007519F00EC8C35 /* peopleCenterViewController.h */,
 				9DDA4FEC2007519F00EC8C35 /* peopleCenterViewController.m */,
 				9DDA4FF5200764DA00EC8C35 /* peopleCenterCell.h */,
@@ -279,6 +286,16 @@
 				9DDA4FF22007590400EC8C35 /* myHeadView.m */,
 			);
 			name = "个人中心";
+			sourceTree = "<group>";
+		};
+		9DDA4FF820076C5000EC8C35 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				9DDA4FF920076C5E00EC8C35 /* icon_right.png */,
+				9DDA4FFA20076C5E00EC8C35 /* icon_right@2x.png */,
+				9DDA4FFB20076C5E00EC8C35 /* icon_right@3x.png */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 		ABBF627182679A232793331F /* Frameworks */ = {
@@ -401,7 +418,9 @@
 				9DDA4FD620074F9300EC8C35 /* icon_dashang_change@2x.png in Resources */,
 				9DDA4F8C2007436C00EC8C35 /* LaunchScreen.storyboard in Resources */,
 				9DDA4FCF20074F4800EC8C35 /* icon_wendao_name.png in Resources */,
+				9DDA4FFC20076C5E00EC8C35 /* icon_right.png in Resources */,
 				9DDA4FE220074FDF00EC8C35 /* icon_jubao_dashizhuye@2x.png in Resources */,
+				9DDA4FFE20076C5E00EC8C35 /* icon_right@3x.png in Resources */,
 				9DDA4FDB20074FB300EC8C35 /* icon_wenzhangxiangqing_zanshang_s.png in Resources */,
 				9DDA4FC420074E2B00EC8C35 /* icon_wendao_sousuo@2x.png in Resources */,
 				9DDA4FD520074F9300EC8C35 /* icon_dashang_change.png in Resources */,
@@ -416,6 +435,7 @@
 				9DDA4F892007436C00EC8C35 /* Assets.xcassets in Resources */,
 				9DDA4FC520074E2B00EC8C35 /* icon_wendao_sousuo@3x.png in Resources */,
 				9DDA4F872007436C00EC8C35 /* Main.storyboard in Resources */,
+				9DDA4FFD20076C5E00EC8C35 /* icon_right@2x.png in Resources */,
 				9DDA4FD020074F4800EC8C35 /* icon_wendao_name@2x.png in Resources */,
 				9DDA4FBD20074DE600EC8C35 /* icon_dashizhuye_more.png in Resources */,
 				9DDA4FD120074F4800EC8C35 /* icon_wendao_name@3x.png in Resources */,
