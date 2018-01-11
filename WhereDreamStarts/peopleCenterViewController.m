@@ -8,10 +8,12 @@
 
 #import "peopleCenterViewController.h"
 #import "myHeadView.h"
+#import "peopleCenterCell.h"
 @interface peopleCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
 
     UITableView *_tableView;
+    NSArray *_nameArray;
 }
 @end
 
@@ -20,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    _nameArray=@[@"我的账单",@"我的房间",@"我的管家",@"客服",@"系统设置"];
     [self setUI];
 
     
@@ -41,11 +44,14 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
-    return 5;
+    return _nameArray.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
 
-    return 150;
+    return 183;
+}
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 
@@ -56,10 +62,12 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     static NSString *string=@"indexPath";
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:string];
+    peopleCenterCell *cell=[tableView dequeueReusableCellWithIdentifier:string];
     if (!cell) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:string];
+        cell=[[peopleCenterCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:string];
     }
+    [cell.button setTitle:_nameArray[indexPath.row] forState:UIControlStateNormal];
+
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
