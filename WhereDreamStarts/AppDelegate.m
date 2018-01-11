@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "JYJNavigationController.h"
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    self.window.backgroundColor =[UIColor whiteColor];
+    
+    // 设置窗口的根控制器
+    self.window.rootViewController = [[JYJNavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
