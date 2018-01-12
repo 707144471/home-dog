@@ -28,6 +28,10 @@
  */
 #import "UIImageView+WebCache.h"//image图片
 #import <UIButton+WebCache.h>//按钮图片
+/*数据源*/
+#import "DataSource.h"
+/*狗狗模型类*/
+#import "dogModel.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

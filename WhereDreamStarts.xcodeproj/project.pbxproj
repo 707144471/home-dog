@@ -46,6 +46,9 @@
 		9DDA4FFC20076C5E00EC8C35 /* icon_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDA4FF920076C5E00EC8C35 /* icon_right.png */; };
 		9DDA4FFD20076C5E00EC8C35 /* icon_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDA4FFA20076C5E00EC8C35 /* icon_right@2x.png */; };
 		9DDA4FFE20076C5E00EC8C35 /* icon_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDA4FFB20076C5E00EC8C35 /* icon_right@3x.png */; };
+		9DDA50052008476800EC8C35 /* XLSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA50042008476800EC8C35 /* XLSphereView.m */; };
+		9DDA500920084B2F00EC8C35 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA500820084B2F00EC8C35 /* DataSource.m */; };
+		9DDA500C2008550700EC8C35 /* dogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA500B2008550700EC8C35 /* dogModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,14 @@
 		9DDA4FF920076C5E00EC8C35 /* icon_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_right.png; sourceTree = "<group>"; };
 		9DDA4FFA20076C5E00EC8C35 /* icon_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_right@2x.png"; sourceTree = "<group>"; };
 		9DDA4FFB20076C5E00EC8C35 /* icon_right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_right@3x.png"; sourceTree = "<group>"; };
+		9DDA50012008476800EC8C35 /* XLMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLMatrix.h; sourceTree = "<group>"; };
+		9DDA50022008476800EC8C35 /* XLPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPoint.h; sourceTree = "<group>"; };
+		9DDA50032008476800EC8C35 /* XLSphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSphereView.h; sourceTree = "<group>"; };
+		9DDA50042008476800EC8C35 /* XLSphereView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSphereView.m; sourceTree = "<group>"; };
+		9DDA500720084B2F00EC8C35 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		9DDA500820084B2F00EC8C35 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		9DDA500A2008550700EC8C35 /* dogModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dogModel.h; sourceTree = "<group>"; };
+		9DDA500B2008550700EC8C35 /* dogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dogModel.m; sourceTree = "<group>"; };
 		C5246F11A01DF2BE89BED15A /* libPods-WhereDreamStarts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhereDreamStarts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -192,6 +203,8 @@
 				9DDA4F822007436C00EC8C35 /* ViewController.h */,
 				9DDA4F832007436C00EC8C35 /* ViewController.m */,
 				9DDA4FF4200762F400EC8C35 /* MyPrefixHeader.pch */,
+				9DDA500620084B0B00EC8C35 /* 数据源 */,
+				9DDA4FFF2008474D00EC8C35 /* 圆球转动 */,
 				9DDA4FEA2007518100EC8C35 /* 个人中心 */,
 				9DDA4FAF20074A4700EC8C35 /* 导航条 */,
 				9DDA4F852007436C00EC8C35 /* Main.storyboard */,
@@ -296,6 +309,36 @@
 				9DDA4FFB20076C5E00EC8C35 /* icon_right@3x.png */,
 			);
 			name = image;
+			sourceTree = "<group>";
+		};
+		9DDA4FFF2008474D00EC8C35 /* 圆球转动 */ = {
+			isa = PBXGroup;
+			children = (
+				9DDA50002008476800EC8C35 /* SphereView */,
+			);
+			name = "圆球转动";
+			sourceTree = "<group>";
+		};
+		9DDA50002008476800EC8C35 /* SphereView */ = {
+			isa = PBXGroup;
+			children = (
+				9DDA50012008476800EC8C35 /* XLMatrix.h */,
+				9DDA50022008476800EC8C35 /* XLPoint.h */,
+				9DDA50032008476800EC8C35 /* XLSphereView.h */,
+				9DDA50042008476800EC8C35 /* XLSphereView.m */,
+			);
+			path = SphereView;
+			sourceTree = "<group>";
+		};
+		9DDA500620084B0B00EC8C35 /* 数据源 */ = {
+			isa = PBXGroup;
+			children = (
+				9DDA500720084B2F00EC8C35 /* DataSource.h */,
+				9DDA500820084B2F00EC8C35 /* DataSource.m */,
+				9DDA500A2008550700EC8C35 /* dogModel.h */,
+				9DDA500B2008550700EC8C35 /* dogModel.m */,
+			);
+			name = "数据源";
 			sourceTree = "<group>";
 		};
 		ABBF627182679A232793331F /* Frameworks */ = {
@@ -519,7 +562,10 @@
 			files = (
 				9DDA4FED2007519F00EC8C35 /* peopleCenterViewController.m in Sources */,
 				9DDA4FE92007510E00EC8C35 /* JYJAnimateViewController.m in Sources */,
+				9DDA50052008476800EC8C35 /* XLSphereView.m in Sources */,
 				9DDA4FB420074A6F00EC8C35 /* JYJBaseNavigationController.m in Sources */,
+				9DDA500920084B2F00EC8C35 /* DataSource.m in Sources */,
+				9DDA500C2008550700EC8C35 /* dogModel.m in Sources */,
 				9DDA4FB520074A6F00EC8C35 /* JYJNavigationController.m in Sources */,
 				9DDA4FF02007524B00EC8C35 /* PeopleIsChildCenter.m in Sources */,
 				9DDA4F842007436C00EC8C35 /* ViewController.m in Sources */,
