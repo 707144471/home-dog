@@ -32,6 +32,13 @@
 #import "DataSource.h"
 /*狗狗模型类*/
 #import "dogModel.h"
+/*自定义标签*/
+#import "MyLabel.h"
+
+
+#define WEAKSELF  __weak __typeof__(self) weakSelf = self;
+
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
