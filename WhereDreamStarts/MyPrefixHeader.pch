@@ -28,6 +28,8 @@
  */
 #import "UIImageView+WebCache.h"//image图片
 #import <UIButton+WebCache.h>//按钮图片
+/**加载提示**/
+#import "FTIndicator.h"
 /*数据源*/
 #import "DataSource.h"
 /*狗狗模型类*/
@@ -43,7 +45,17 @@
 
 
 #define WEAKSELF  __weak __typeof__(self) weakSelf = self;
-
+/*
+[FTIndicator showProgressWithmessage:@"正在加载"];
+[FTIndicator showToastMessage:@"底部弹出"];
+[FTIndicator showInfoWithMessage:@"感叹号"];
+[FTIndicator showSuccessWithMessage:@"正确(成功)"];
+[FTIndicator showErrorWithMessage:@"发生错误"];
+[FTIndicator showNotificationWithTitle:@"顶部弹框标题" message:@"顶部弹框提示信息"];
+[FTIndicator dismissProgress];
+[FTIndicator dismissToast];
+[FTIndicator dismissNotification];
+*/
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

@@ -14,6 +14,11 @@
 		381CC3522009D78100DD8ABA /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 381CC3512009D78100DD8ABA /* MyLabel.m */; };
 		386F53AB200B19AC00517CA6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F53AA200B19AC00517CA6 /* WebViewController.m */; };
 		386F53B0200B236700517CA6 /* ClassificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F53AF200B236700517CA6 /* ClassificationViewController.m */; };
+		386F53BE200B33FE00517CA6 /* FTIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F53B2200B33FE00517CA6 /* FTIndicator.m */; };
+		386F53BF200B33FE00517CA6 /* FTToastIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F53B4200B33FE00517CA6 /* FTToastIndicator.m */; };
+		386F53C0200B33FE00517CA6 /* ImageAsserts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 386F53B7200B33FE00517CA6 /* ImageAsserts.bundle */; };
+		386F53C1200B33FE00517CA6 /* FTProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F53B9200B33FE00517CA6 /* FTProgressIndicator.m */; };
+		386F53C2200B33FE00517CA6 /* FTNotificationIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F53BB200B33FE00517CA6 /* FTNotificationIndicator.m */; };
 		39741246F8FDA7B73051AA8C /* libPods-WhereDreamStarts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5246F11A01DF2BE89BED15A /* libPods-WhereDreamStarts.a */; };
 		9DDA4F7E2007436C00EC8C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F7D2007436C00EC8C35 /* main.m */; };
 		9DDA4F812007436C00EC8C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F802007436C00EC8C35 /* AppDelegate.m */; };
@@ -89,6 +94,15 @@
 		386F53AA200B19AC00517CA6 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		386F53AE200B236700517CA6 /* ClassificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassificationViewController.h; sourceTree = "<group>"; };
 		386F53AF200B236700517CA6 /* ClassificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassificationViewController.m; sourceTree = "<group>"; };
+		386F53B2200B33FE00517CA6 /* FTIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTIndicator.m; sourceTree = "<group>"; };
+		386F53B4200B33FE00517CA6 /* FTToastIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTToastIndicator.m; sourceTree = "<group>"; };
+		386F53B5200B33FE00517CA6 /* FTToastIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTToastIndicator.h; sourceTree = "<group>"; };
+		386F53B7200B33FE00517CA6 /* ImageAsserts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ImageAsserts.bundle; sourceTree = "<group>"; };
+		386F53B8200B33FE00517CA6 /* FTProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTProgressIndicator.h; sourceTree = "<group>"; };
+		386F53B9200B33FE00517CA6 /* FTProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTProgressIndicator.m; sourceTree = "<group>"; };
+		386F53BB200B33FE00517CA6 /* FTNotificationIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTNotificationIndicator.m; sourceTree = "<group>"; };
+		386F53BC200B33FE00517CA6 /* FTNotificationIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTNotificationIndicator.h; sourceTree = "<group>"; };
+		386F53BD200B33FE00517CA6 /* FTIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTIndicator.h; sourceTree = "<group>"; };
 		6C2FD1B2F5745D100890D92E /* Pods-WhereDreamStarts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereDreamStarts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereDreamStarts/Pods-WhereDreamStarts.debug.xcconfig"; sourceTree = "<group>"; };
 		99AFFF054D1A973B4E41A863 /* Pods-WhereDreamStarts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereDreamStarts.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereDreamStarts/Pods-WhereDreamStarts.release.xcconfig"; sourceTree = "<group>"; };
 		9DDA4F792007436C00EC8C35 /* WhereDreamStarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereDreamStarts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +248,46 @@
 			name = "分类";
 			sourceTree = "<group>";
 		};
+		386F53B1200B33FE00517CA6 /* FTIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				386F53B2200B33FE00517CA6 /* FTIndicator.m */,
+				386F53B3200B33FE00517CA6 /* FTToastIndicator */,
+				386F53B6200B33FE00517CA6 /* FTProgressIndicator */,
+				386F53BA200B33FE00517CA6 /* FTNotificationIndicator */,
+				386F53BD200B33FE00517CA6 /* FTIndicator.h */,
+			);
+			path = FTIndicator;
+			sourceTree = "<group>";
+		};
+		386F53B3200B33FE00517CA6 /* FTToastIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				386F53B4200B33FE00517CA6 /* FTToastIndicator.m */,
+				386F53B5200B33FE00517CA6 /* FTToastIndicator.h */,
+			);
+			path = FTToastIndicator;
+			sourceTree = "<group>";
+		};
+		386F53B6200B33FE00517CA6 /* FTProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				386F53B7200B33FE00517CA6 /* ImageAsserts.bundle */,
+				386F53B8200B33FE00517CA6 /* FTProgressIndicator.h */,
+				386F53B9200B33FE00517CA6 /* FTProgressIndicator.m */,
+			);
+			path = FTProgressIndicator;
+			sourceTree = "<group>";
+		};
+		386F53BA200B33FE00517CA6 /* FTNotificationIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				386F53BB200B33FE00517CA6 /* FTNotificationIndicator.m */,
+				386F53BC200B33FE00517CA6 /* FTNotificationIndicator.h */,
+			);
+			path = FTNotificationIndicator;
+			sourceTree = "<group>";
+		};
 		911DFF91121A03ADC5B4B9AC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +325,7 @@
 				9DDA4F7F2007436C00EC8C35 /* AppDelegate.h */,
 				9DDA4F802007436C00EC8C35 /* AppDelegate.m */,
 				9DDA4FF4200762F400EC8C35 /* MyPrefixHeader.pch */,
+				386F53B1200B33FE00517CA6 /* FTIndicator */,
 				386F53AD200B230F00517CA6 /* 分类 */,
 				386F53AC200B230500517CA6 /* 首页 */,
 				386F53A8200B199200517CA6 /* 网页加载 */,
@@ -537,6 +592,7 @@
 				9DDA4FCF20074F4800EC8C35 /* icon_wendao_name.png in Resources */,
 				9DDA4FFC20076C5E00EC8C35 /* icon_right.png in Resources */,
 				9DDA4FE220074FDF00EC8C35 /* icon_jubao_dashizhuye@2x.png in Resources */,
+				386F53C0200B33FE00517CA6 /* ImageAsserts.bundle in Resources */,
 				9DDA4FFE20076C5E00EC8C35 /* icon_right@3x.png in Resources */,
 				9DDA4FDB20074FB300EC8C35 /* icon_wenzhangxiangqing_zanshang_s.png in Resources */,
 				9DDA4FC420074E2B00EC8C35 /* icon_wendao_sousuo@2x.png in Resources */,
@@ -645,12 +701,16 @@
 				9DDA4FF02007524B00EC8C35 /* PeopleIsChildCenter.m in Sources */,
 				9DDA4F842007436C00EC8C35 /* ViewController.m in Sources */,
 				381CC34E2009D58400DD8ABA /* homeTableViewCell.m in Sources */,
+				386F53C2200B33FE00517CA6 /* FTNotificationIndicator.m in Sources */,
 				386F53AB200B19AC00517CA6 /* WebViewController.m in Sources */,
+				386F53C1200B33FE00517CA6 /* FTProgressIndicator.m in Sources */,
 				381CC3522009D78100DD8ABA /* MyLabel.m in Sources */,
 				9DDA4FB820074B0800EC8C35 /* UIImage+Extension.m in Sources */,
 				386F53B0200B236700517CA6 /* ClassificationViewController.m in Sources */,
 				9DDA4FF32007590400EC8C35 /* myHeadView.m in Sources */,
+				386F53BF200B33FE00517CA6 /* FTToastIndicator.m in Sources */,
 				9DDA4F812007436C00EC8C35 /* AppDelegate.m in Sources */,
+				386F53BE200B33FE00517CA6 /* FTIndicator.m in Sources */,
 				381CC3462009C8A200DD8ABA /* homeCell.m in Sources */,
 				9DDA4F7E2007436C00EC8C35 /* main.m in Sources */,
 				9DDA4FE6200750A400EC8C35 /* JYJSliderMenuTool.m in Sources */,

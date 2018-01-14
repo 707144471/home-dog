@@ -8,7 +8,7 @@
 
 #import "WebViewController.h"
 
-@interface WebViewController ()
+@interface WebViewController ()<UIWebViewDelegate>
 
 @end
 
@@ -21,6 +21,7 @@
         if ([self.urlString length]>0) {
             UIWebView *web=[[UIWebView alloc]init];
             web.backgroundColor=[UIColor whiteColor];
+            web.delegate=self;
             [self.view addSubview:web];
             web.frame=self.view.bounds;
             [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]]];
@@ -28,6 +29,16 @@
     }
     
     // Do any additional setup after loading the view.
+}
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    
+    NSLog(@"开始加载了");
+    [FTIndicator showProgressWithmessage:@"正在加载"];
+}
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    
+    NSLog(@"结束加载了");
+    [FTIndicator dismissProgress];
 }
 -(void)viewWillAppear:(BOOL)animated{
     
