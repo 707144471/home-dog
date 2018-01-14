@@ -152,6 +152,17 @@
     [[NSScanner scannerWithString:bString] scanHexInt:&b];
     return [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f) blue:((float) b / 255.0f) alpha:1.0f];
 }
+#pragma mark转场动画
++(void)CurrentInterface:(CALayer *)layer time:(float)timeValue timingFunction:(CAMediaTimingFunction *)timingFunction type:(NSString *)type subtype:(NSString *)subtype{
+    
+    CATransition *animation = [CATransition animation];
+    animation.duration = timeValue;
+    animation.timingFunction = timingFunction;
+    animation.type = type;
+    animation.subtype = subtype;
+    [layer addAnimation:animation forKey:nil];
+    
+}
 #pragma mark 设置圆角
 +(void)SetRoundedCorners:(UIView *)view Angle:(float)Angle{
     
@@ -173,6 +184,18 @@
     }
     block(allArray);
     
+}
+#pragma mark 进入个人中心
++(void)goPeopleCenter:(UIViewController *)viewCtrl{
+    
+    [DataSource CurrentInterface:viewCtrl.view.window.layer time:0.2 timingFunction:UIViewAnimationCurveEaseInOut type:kCATransitionFade subtype:kCATransitionFromLeft];
+    peopleCenterViewController *myViewCtrol=[[peopleCenterViewController alloc]init];
+    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:myViewCtrol];
+    nav.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    nav.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
+    [viewCtrl presentViewController:nav animated:NO completion:^{
+        nav.view.backgroundColor = [[UIColor clearColor] colorWithAlphaComponent:0.5];
+    }];
 }
 #pragma mark 创建全部狗
 +(NSArray *)creatDogs{

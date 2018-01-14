@@ -36,6 +36,10 @@
 #import "MyLabel.h"
 /*网页加载*/
 #import "WebViewController.h"
+/**分类**/
+#import "ClassificationViewController.h"
+/*个人中心*/
+#import "peopleCenterViewController.h"
 
 
 #define WEAKSELF  __weak __typeof__(self) weakSelf = self;

@@ -13,6 +13,7 @@
 		381CC34E2009D58400DD8ABA /* homeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 381CC34D2009D58400DD8ABA /* homeTableViewCell.m */; };
 		381CC3522009D78100DD8ABA /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 381CC3512009D78100DD8ABA /* MyLabel.m */; };
 		386F53AB200B19AC00517CA6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F53AA200B19AC00517CA6 /* WebViewController.m */; };
+		386F53B0200B236700517CA6 /* ClassificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F53AF200B236700517CA6 /* ClassificationViewController.m */; };
 		39741246F8FDA7B73051AA8C /* libPods-WhereDreamStarts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5246F11A01DF2BE89BED15A /* libPods-WhereDreamStarts.a */; };
 		9DDA4F7E2007436C00EC8C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F7D2007436C00EC8C35 /* main.m */; };
 		9DDA4F812007436C00EC8C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F802007436C00EC8C35 /* AppDelegate.m */; };
@@ -86,6 +87,8 @@
 		381CC3512009D78100DD8ABA /* MyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLabel.m; sourceTree = "<group>"; };
 		386F53A9200B19AC00517CA6 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		386F53AA200B19AC00517CA6 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		386F53AE200B236700517CA6 /* ClassificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassificationViewController.h; sourceTree = "<group>"; };
+		386F53AF200B236700517CA6 /* ClassificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassificationViewController.m; sourceTree = "<group>"; };
 		6C2FD1B2F5745D100890D92E /* Pods-WhereDreamStarts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereDreamStarts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereDreamStarts/Pods-WhereDreamStarts.debug.xcconfig"; sourceTree = "<group>"; };
 		99AFFF054D1A973B4E41A863 /* Pods-WhereDreamStarts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereDreamStarts.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereDreamStarts/Pods-WhereDreamStarts.release.xcconfig"; sourceTree = "<group>"; };
 		9DDA4F792007436C00EC8C35 /* WhereDreamStarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereDreamStarts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +216,24 @@
 			name = "网页加载";
 			sourceTree = "<group>";
 		};
+		386F53AC200B230500517CA6 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				9DDA4F822007436C00EC8C35 /* ViewController.h */,
+				9DDA4F832007436C00EC8C35 /* ViewController.m */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		386F53AD200B230F00517CA6 /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				386F53AE200B236700517CA6 /* ClassificationViewController.h */,
+				386F53AF200B236700517CA6 /* ClassificationViewController.m */,
+			);
+			name = "分类";
+			sourceTree = "<group>";
+		};
 		911DFF91121A03ADC5B4B9AC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,9 +270,9 @@
 			children = (
 				9DDA4F7F2007436C00EC8C35 /* AppDelegate.h */,
 				9DDA4F802007436C00EC8C35 /* AppDelegate.m */,
-				9DDA4F822007436C00EC8C35 /* ViewController.h */,
-				9DDA4F832007436C00EC8C35 /* ViewController.m */,
 				9DDA4FF4200762F400EC8C35 /* MyPrefixHeader.pch */,
+				386F53AD200B230F00517CA6 /* 分类 */,
+				386F53AC200B230500517CA6 /* 首页 */,
 				386F53A8200B199200517CA6 /* 网页加载 */,
 				381CC34F2009D77500DD8ABA /* 自定义 */,
 				381CC33D2009C5A500DD8ABA /* 首页 */,
@@ -627,6 +648,7 @@
 				386F53AB200B19AC00517CA6 /* WebViewController.m in Sources */,
 				381CC3522009D78100DD8ABA /* MyLabel.m in Sources */,
 				9DDA4FB820074B0800EC8C35 /* UIImage+Extension.m in Sources */,
+				386F53B0200B236700517CA6 /* ClassificationViewController.m in Sources */,
 				9DDA4FF32007590400EC8C35 /* myHeadView.m in Sources */,
 				9DDA4F812007436C00EC8C35 /* AppDelegate.m in Sources */,
 				381CC3462009C8A200DD8ABA /* homeCell.m in Sources */,

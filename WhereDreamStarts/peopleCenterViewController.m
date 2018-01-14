@@ -30,7 +30,7 @@
     // Do any additional setup after loading the view.
 }
 -(void)setUI{
-    _tableView=[[UITableView alloc]init];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width-100, self.view.frame.size.height) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -40,7 +40,11 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    _tableView.frame = self.view.bounds;
+    self.navigationController.navigationBarHidden=YES;
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
@@ -56,7 +60,7 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 
     myHeadView *view=[[myHeadView alloc]init];
-    view.weight=self.view.bounds.size.width;
+    view.weight=self.view.bounds.size.width-100;
     return view;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

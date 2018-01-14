@@ -1,17 +1,16 @@
 //
-//  ViewController.m
+//  ClassificationViewController.m
 //  WhereDreamStarts
 //
-//  Created by 123 on 2018/1/11.
+//  Created by 韩少林 on 2018/1/14.
 //  Copyright © 2018年 handsomeBoy. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "JYJSliderMenuTool.h"
+#import "ClassificationViewController.h"
 #import "homeReusableView.h"
 #import "homeCell.h"
 #import "homeTableViewCell.h"
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
+@interface ClassificationViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
 {
     UITableView *_tableView;
     NSArray *_arrayDogs;
@@ -21,76 +20,24 @@
 //瀑布流
 @property(nonatomic,strong)UICollectionView *collectionView;
 
-
-
 @end
 
-@implementation ViewController
+@implementation ClassificationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[DataSource colorWithHexString:@"f5f5f5"];
+    self.title=@"狗狗分类";
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.edgesForExtendedLayout =UIRectEdgeNone;
     // 这个方法是为了，不让隐藏状态栏的时候出现view上移
     self.extendedLayoutIncludesOpaqueBars = YES;
-    self.title = @"狗狗百科";
+    self.navigationController.navigationBar.translucent = NO;
     _indexModel=0;//初始显示第一个
     [self setupNav];
     [self CreateAClassificationTable];
-
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
-
-
-#pragma mark 进入个人中心
-- (void)profileCenter {
-    // 展示个人中心
-    //[JYJSliderMenuTool showWithRootViewController:self];
-    [DataSource goPeopleCenter:self];
-}
-#pragma mark 添加左右按钮
-- (void)setupNav {
-    
-    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    negativeSpacer.width = -15;
-    UIButton *profileButton = [[UIButton alloc] init];
-    // 设置按钮的背景图片
-    [profileButton setImage:[UIImage imageNamed:@"icon_wendao_name"] forState:UIControlStateNormal];
-    [profileButton setImage:[UIImage imageNamed:@"icon_wendao_name"] forState:UIControlStateHighlighted];
-    // 设置按钮的尺寸为背景图片的尺寸
-    profileButton.frame = CGRectMake(0, 0, 44, 44);
-    //监听按钮的点击
-    [profileButton addTarget:self action:@selector(profileCenter) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *profile = [[UIBarButtonItem alloc] initWithCustomView:profileButton];
-    self.navigationItem.leftBarButtonItems = @[negativeSpacer, profile];
-    
-    // 右边按钮
-    /*
-    UIButton *searchButton = [[UIButton alloc] init];
-    [searchButton setImage:[UIImage imageNamed:@"icon_jubao_dashizhuye"] forState:UIControlStateNormal];
-    [searchButton setImage:[UIImage imageNamed:@"icon_jubao_dashizhuye"] forState:UIControlStateHighlighted];
-    searchButton.frame = CGRectMake(0, 0, 44, 44);
-    [searchButton addTarget:self action:@selector(rightClick:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIButton *msgButton = [[UIButton alloc] init];
-    [msgButton setImage:[UIImage imageNamed:@"icon_dashang_change"] forState:UIControlStateNormal];
-    [msgButton setImage:[UIImage imageNamed:@"icon_dashang_change"] forState:UIControlStateHighlighted];
-    msgButton.frame = CGRectMake(40, 0, 44, 44);
-    [msgButton addTarget:self action:@selector(rightClick:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIView *rightView = [[UIView alloc] init];
-    rightView.frame = CGRectMake(0, 0, 88, 44);
-    [rightView addSubview:searchButton];
-    [rightView addSubview:msgButton];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightView];
-    self.navigationItem.rightBarButtonItems = @[negativeSpacer, rightItem];
-     */
-}
-#pragma mark 用户点击右边按钮执行该方法
--(void)rightClick:(UIButton *)btn{
-
-}
-
 #pragma mark 创建分类表格
 -(void)CreateAClassificationTable{
     WEAKSELF
@@ -98,12 +45,12 @@
         _arrayType=typeArray;
         [weakSelf relodDatas];
     }];
-    
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, 100, self.view.frame.size.height-64) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 100, self.view.frame.size.height) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:_tableView];
+    _tableView.sd_layout.leftSpaceToView(self.view, 0).topSpaceToView(self.view, 0).bottomSpaceToView(self.view, 0).widthIs(100);
     
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -111,20 +58,21 @@
     flowLayout.minimumLineSpacing = 15;
     //上
     flowLayout.sectionInset = UIEdgeInsetsMake(10, 15, 10, 15);
-    self.collectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(100, 75, self.view.frame.size.width-100, self.view.frame.size.height-75) collectionViewLayout:flowLayout];
+    self.collectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(100, 0, self.view.frame.size.width-100, self.view.frame.size.height) collectionViewLayout:flowLayout];
     self.collectionView.backgroundColor=[DataSource colorWithHexString:@"f5f5f5"];
     self.collectionView.delegate=self;
     self.collectionView.dataSource=self;
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"123"];
     [self.collectionView registerClass:[homeReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"cellHeader"];
     [self.view addSubview:self.collectionView];
+    self.collectionView.sd_layout.leftSpaceToView(_tableView, 0).topSpaceToView(self.view, 0).rightSpaceToView(self.view, 0).bottomSpaceToView(self.view, 0);
     
     
     
-
+    
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     return 50;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -136,12 +84,12 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     _indexModel=indexPath.row;
-     [self relodDatas];
-
-
+    [self relodDatas];
+    
+    
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     static NSString *stringStr=@"indexPath";
     homeTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:stringStr];
     if (!cell) {
@@ -152,34 +100,31 @@
     if (indexPath.row==_indexModel) {
         cell.backgroundColor=[DataSource colorWithHexString:@"f5f5f5"];
     }else{
-         cell.backgroundColor=[DataSource colorWithHexString:@"ffffff"];
+        cell.backgroundColor=[DataSource colorWithHexString:@"ffffff"];
     }
-
+    
     return cell;
 }
 
 #pragma mark 瀑布流delegate
 //社区区头
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    
     NSString *reuseIdentifier;
     if ([kind isEqualToString: UICollectionElementKindSectionHeader ]){
         reuseIdentifier = @"cellHeader";
     }
     homeReusableView *view =  [collectionView dequeueReusableSupplementaryViewOfKind :kind withReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]){
-        dogModel *model=_arrayType[_indexModel];
-        view.name.text=model.name;
+        //dogModel *model=_arrayType[_indexModel];
+        //view.name.text=model.name;
     }
-    
     return view;
 }
 //返回头headerView的大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     
     
-    CGSize size={self.view.frame.size.width,30};
+    CGSize size={self.view.frame.size.width,0};
     return size;
 }
 
@@ -213,7 +158,7 @@
     //设置图片不变形剪切出最适合的一段
     _dogPhoto.contentMode =  UIViewContentModeScaleAspectFill;
     [cell.contentView addSubview:_dogPhoto];
-   
+    
     MyLabel *_dogName=[[MyLabel alloc]initWithFrame:CGRectMake(5, 71, 60, 29)];
     _dogName.verticalAlignment=VerticalAlignmentTop;
     _dogName.textColor=[DataSource colorWithHexString:@"737373"];
@@ -236,9 +181,11 @@
     if (_arrayDogs.count>indexPath.row) {
         dogModel *dog=_arrayDogs[indexPath.row];
         if (dog.BaiKeUrlStr!=nil) {
+            self.hidesBottomBarWhenPushed=YES;
             WebViewController *webCtrl=[[WebViewController alloc]init];
             webCtrl.urlString=dog.BaiKeUrlStr;
             [self.navigationController pushViewController:webCtrl animated:YES];
+            self.hidesBottomBarWhenPushed=NO;
         }
     }
     
@@ -258,10 +205,42 @@
     }];
     
 }
+
+#pragma mark 添加左右按钮
+- (void)setupNav {
+    
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    negativeSpacer.width = -15;
+    UIButton *profileButton = [[UIButton alloc] init];
+    // 设置按钮的背景图片
+    [profileButton setImage:[UIImage imageNamed:@"icon_wendao_name"] forState:UIControlStateNormal];
+    [profileButton setImage:[UIImage imageNamed:@"icon_wendao_name"] forState:UIControlStateHighlighted];
+    // 设置按钮的尺寸为背景图片的尺寸
+    profileButton.frame = CGRectMake(0, 0, 44, 44);
+    //监听按钮的点击
+    [profileButton addTarget:self action:@selector(profileCenter) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *profile = [[UIBarButtonItem alloc] initWithCustomView:profileButton];
+    self.navigationItem.leftBarButtonItems = @[negativeSpacer, profile];
+    
+}
+#pragma mark 进入个人中心
+-(void)profileCenter{
+    [DataSource goPeopleCenter:self];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

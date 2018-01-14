@@ -18,4 +18,8 @@
 +(void)SetRoundedCorners:(UIView *)view Angle:(float)Angle;
 #pragma mark 获取狗狗列表数据
 +(void)getDogsList:(dogModel *)model index:(NSInteger)idx block:(void(^)(NSMutableArray *dogArray))block;
+#pragma mark 转场动画
++(void)CurrentInterface:(CALayer *)layer time:(float)timeValue timingFunction:(CAMediaTimingFunction *)timingFunction type:(NSString *)type subtype:(NSString *)subtype;
+#pragma mark 进入个人中心
++(void)goPeopleCenter:(UIViewController *)viewCtrl;
 @end

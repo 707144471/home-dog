@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "JYJNavigationController.h"
 #import "ViewController.h"
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -23,12 +23,59 @@
     self.window.backgroundColor =[UIColor whiteColor];
     
     // 设置窗口的根控制器
+    /*
     self.window.rootViewController = [[JYJNavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     [self.window makeKeyAndVisible];
+     */
+    [self SetController];
     return YES;
 }
-
-
+#pragma mark 设置控制器
+-(void)SetController{
+    //首页
+    ViewController *home=[[ViewController alloc]init];
+    UINavigationController *homeNav=[[UINavigationController alloc]initWithRootViewController:home];
+    homeNav.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"狗狗百科"image:[UIImage imageNamed:@"icon_news"]tag:1005];
+    // 提示信息
+    //messageNav.tabBarItem.badgeValue= @"new";
+    
+    
+    //分类
+    ClassificationViewController *Classification = [[ClassificationViewController alloc]init];
+    UINavigationController *ClassificationNav = [[UINavigationController alloc]initWithRootViewController:Classification];
+    ClassificationNav.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"狗狗分类"image:[UIImage imageNamed:@"icon_mine"]tag:1004];
+    
+    
+    // 标签视图控制器，用来管理导航控制器的
+    UITabBarController *tabBars = [[UITabBarController alloc]init];
+    // 设置背景颜色
+    tabBars.tabBar.barTintColor= [DataSource colorWithHexString:@"f6f6f6"];
+    // 设置不半透明
+    tabBars.tabBar.translucent= NO;
+    // 设置选中按钮的颜色
+    tabBars.tabBar.tintColor= [DataSource colorWithHexString:@"d9a700"];
+    tabBars.tabBar.unselectedItemTintColor=[DataSource colorWithHexString:@"4b4b4b"];
+    
+    // 给标签控制器指定子控制器
+    tabBars.viewControllers= [NSArray arrayWithObjects:homeNav,ClassificationNav,nil];
+    self.window.rootViewController=tabBars;
+    tabBars.delegate= self;
+    
+}
+#pragma mark点击tabBar上按钮时触发
+- (void)tabBarController:(UITabBarController*)tabBarController didSelectViewController:(UIViewController*)viewController{
+    NSLog(@"==%@",viewController);
+    UINavigationController*navc = (UINavigationController*)viewController;
+    navc.tabBarItem.badgeValue= nil;
+}
+#pragma mark 点击跳转batbar
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    //这里我判断的是当前点击的tabBarItem的标题
+    if ([viewController.tabBarItem.title isEqualToString:@"消息"]) {
+    
+    }
+    return YES;
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
