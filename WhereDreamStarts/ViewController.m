@@ -55,8 +55,8 @@
     negativeSpacer.width = -15;
     UIButton *profileButton = [[UIButton alloc] init];
     // 设置按钮的背景图片
-    [profileButton setImage:[UIImage imageNamed:@"icon_wendao_name"] forState:UIControlStateNormal];
-    [profileButton setImage:[UIImage imageNamed:@"icon_wendao_name"] forState:UIControlStateHighlighted];
+    [profileButton setImage:[UIImage imageNamed:@"icon_paidui_s"] forState:UIControlStateNormal];
+    [profileButton setImage:[UIImage imageNamed:@"icon_paidui_s"] forState:UIControlStateHighlighted];
     // 设置按钮的尺寸为背景图片的尺寸
     profileButton.frame = CGRectMake(0, 0, 44, 44);
     //监听按钮的点击

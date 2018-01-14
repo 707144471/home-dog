@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _nameArray=@[@"我的账单",@"我的房间",@"我的管家",@"客服",@"系统设置"];
+    _nameArray=@[@"我的狗狗",@"我的收藏",@"我的订单",@"系统设置",@"联系我们"];
     [self setUI];
 
     
