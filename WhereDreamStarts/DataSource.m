@@ -186,11 +186,16 @@
                          @"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2029921186,158604549&fm=5",
                          @"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1426763083,628786910&fm=5",
                          @"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1876203052,395878551&fm=5"];
+    NSArray *BaiKeUrlArray=@[@"https://baike.baidu.com/item/%E5%90%89%E5%A8%83%E5%A8%83/124178?fr=aladdin",
+                        @"hhttps://baike.baidu.com/item/%E5%8D%9A%E7%BE%8E%E7%8A%AC",
+                        @"https://baike.baidu.com/item/%E9%A9%AC%E5%B0%94%E6%B5%8E%E6%96%AF%E7%8A%AC",
+                             @"https://baike.baidu.com/item/%E7%BA%A6%E5%85%8B%E5%A4%8F%E6%A2%97%E7%8A%AC"];
     for (int i=0; i<nameArray1.count; i++) {
         dogModel *model=[[dogModel alloc]init];
         model.name=nameArray1[i];
         model.PhotoAddress=urlArray1[i];
         model.sizeDog=Size_Subminiature;
+        model.BaiKeUrlStr=BaiKeUrlArray[i];
         [array addObject:model];
     }
     

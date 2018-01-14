@@ -34,6 +34,8 @@
 #import "dogModel.h"
 /*自定义标签*/
 #import "MyLabel.h"
+/*网页加载*/
+#import "WebViewController.h"
 
 
 #define WEAKSELF  __weak __typeof__(self) weakSelf = self;

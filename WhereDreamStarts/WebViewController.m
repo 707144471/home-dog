@@ -1,0 +1,52 @@
+//
+//  WebViewController.m
+//  WhereDreamStarts
+//
+//  Created by 韩少林 on 2018/1/14.
+//  Copyright © 2018年 handsomeBoy. All rights reserved.
+//
+
+#import "WebViewController.h"
+
+@interface WebViewController ()
+
+@end
+
+@implementation WebViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor=[UIColor whiteColor];
+    if (self.urlString!=nil) {
+        if ([self.urlString length]>0) {
+            UIWebView *web=[[UIWebView alloc]init];
+            web.backgroundColor=[UIColor whiteColor];
+            [self.view addSubview:web];
+            web.frame=self.view.bounds;
+            [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]]];
+        }
+    }
+    
+    // Do any additional setup after loading the view.
+}
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden=NO;
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

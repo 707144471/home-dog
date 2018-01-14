@@ -53,4 +53,5 @@ typedef NS_ENUM(NSInteger, StateCharacteristicsDog)
 @property(nonatomic,assign)StateCharacteristicsDog characteristicsDog;//特点
 @property(nonatomic,copy)NSString *PhotoAddress;//预览图片地址
 @property(nonatomic,copy)NSString *IQ;//智商
+@property(nonatomic,copy)NSString *BaiKeUrlStr;//百科地址
 @end

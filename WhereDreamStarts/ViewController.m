@@ -255,6 +255,14 @@
 //点击cell 执行该方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    if (_arrayDogs.count>indexPath.row) {
+        dogModel *dog=_arrayDogs[indexPath.row];
+        if (dog.BaiKeUrlStr!=nil) {
+            WebViewController *webCtrl=[[WebViewController alloc]init];
+            webCtrl.urlString=dog.BaiKeUrlStr;
+            [self.navigationController pushViewController:webCtrl animated:YES];
+        }
+    }
     
 }
 -(CGSize)collectionView:(nonnull UICollectionView *)collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(nonnull NSIndexPath *)indexPath
