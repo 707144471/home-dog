@@ -45,6 +45,11 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden=NO;
 }
+-(void)viewWillDisappear:(BOOL)animated{
+    
+    [super viewWillDisappear:animated];
+    [FTIndicator dismissProgress];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
