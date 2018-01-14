@@ -11,17 +11,13 @@
 #import "homeReusableView.h"
 #import "homeCell.h"
 #import "homeTableViewCell.h"
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
+#import "ScrollViewCell.h"
+#import "IntroductionCell.h"
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *_tableView;
-    NSArray *_arrayDogs;
     NSArray *_arrayType;
-    NSInteger _indexModel;
 }
-//瀑布流
-@property(nonatomic,strong)UICollectionView *collectionView;
-
-
 
 @end
 
@@ -31,10 +27,11 @@
     [super viewDidLoad];
     self.view.backgroundColor=[DataSource colorWithHexString:@"f5f5f5"];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.edgesForExtendedLayout =UIRectEdgeNone;
     // 这个方法是为了，不让隐藏状态栏的时候出现view上移
     self.extendedLayoutIncludesOpaqueBars = YES;
+    self.navigationController.navigationBar.translucent = NO;
     self.title = @"狗狗百科";
-    _indexModel=0;//初始显示第一个
     [self setupNav];
     [self CreateAClassificationTable];
 
@@ -64,198 +61,66 @@
     UIBarButtonItem *profile = [[UIBarButtonItem alloc] initWithCustomView:profileButton];
     self.navigationItem.leftBarButtonItems = @[negativeSpacer, profile];
     
-    // 右边按钮
-    /*
-    UIButton *searchButton = [[UIButton alloc] init];
-    [searchButton setImage:[UIImage imageNamed:@"icon_jubao_dashizhuye"] forState:UIControlStateNormal];
-    [searchButton setImage:[UIImage imageNamed:@"icon_jubao_dashizhuye"] forState:UIControlStateHighlighted];
-    searchButton.frame = CGRectMake(0, 0, 44, 44);
-    [searchButton addTarget:self action:@selector(rightClick:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIButton *msgButton = [[UIButton alloc] init];
-    [msgButton setImage:[UIImage imageNamed:@"icon_dashang_change"] forState:UIControlStateNormal];
-    [msgButton setImage:[UIImage imageNamed:@"icon_dashang_change"] forState:UIControlStateHighlighted];
-    msgButton.frame = CGRectMake(40, 0, 44, 44);
-    [msgButton addTarget:self action:@selector(rightClick:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIView *rightView = [[UIView alloc] init];
-    rightView.frame = CGRectMake(0, 0, 88, 44);
-    [rightView addSubview:searchButton];
-    [rightView addSubview:msgButton];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightView];
-    self.navigationItem.rightBarButtonItems = @[negativeSpacer, rightItem];
-     */
-}
-#pragma mark 用户点击右边按钮执行该方法
--(void)rightClick:(UIButton *)btn{
-
 }
 
 #pragma mark 创建分类表格
 -(void)CreateAClassificationTable{
-    WEAKSELF
-    [DataSource getDogBreeds_block:^(NSMutableArray *typeArray) {
-        _arrayType=typeArray;
-        [weakSelf relodDatas];
-    }];
     
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, 100, self.view.frame.size.height-64) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:_tableView];
-    
-    
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumInteritemSpacing = 10;
-    flowLayout.minimumLineSpacing = 15;
-    //上
-    flowLayout.sectionInset = UIEdgeInsetsMake(10, 15, 10, 15);
-    self.collectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(100, 75, self.view.frame.size.width-100, self.view.frame.size.height-75) collectionViewLayout:flowLayout];
-    self.collectionView.backgroundColor=[DataSource colorWithHexString:@"f5f5f5"];
-    self.collectionView.delegate=self;
-    self.collectionView.dataSource=self;
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"123"];
-    [self.collectionView registerClass:[homeReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"cellHeader"];
-    [self.view addSubview:self.collectionView];
-    
-    
-    
+    _tableView.sd_layout.leftSpaceToView(self.view, 0).topSpaceToView(self.view, 0).rightSpaceToView(self.view, 0).bottomSpaceToView(self.view, 0);
 
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-
-    return 50;
-}
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (_arrayType!=nil) {
-        return _arrayType.count;
+    if (indexPath.row==0) {
+        return 230;
+    }else if (indexPath.row==1){
+        return 70;
     }
     return 0;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+    return 2;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    _indexModel=indexPath.row;
-     [self relodDatas];
-
 
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
-    static NSString *stringStr=@"indexPath";
-    homeTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:stringStr];
-    if (!cell) {
-        cell=[[homeTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:stringStr];
-    }
-    dogModel *model=_arrayType[indexPath.row];
-    cell.model=model;
-    if (indexPath.row==_indexModel) {
-        cell.backgroundColor=[DataSource colorWithHexString:@"f5f5f5"];
+    if (indexPath.row==0) {
+        Cell_init(@"acrollViewcell", ScrollViewCell)
+        return cell;
+    }else if (indexPath.row==1){
+        Cell_init(@"IntroductionCell", IntroductionCell)
+        [cell.tieBaBtn addTarget:self action:@selector(onTieBaYiYuanClick:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.yiYuanBtn addTarget:self action:@selector(onTieBaYiYuanClick:) forControlEvents:UIControlEventTouchUpInside];
+        return cell;
+        
     }else{
-         cell.backgroundColor=[DataSource colorWithHexString:@"ffffff"];
+        Cell_init(@"nullcell", NULLCell)
+        return cell;
     }
 
-    return cell;
 }
-
-#pragma mark 瀑布流delegate
-//社区区头
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    
-    NSString *reuseIdentifier;
-    if ([kind isEqualToString: UICollectionElementKindSectionHeader ]){
-        reuseIdentifier = @"cellHeader";
+#pragma mark 用户点击贴吧或者医院执行该方法
+-(void)onTieBaYiYuanClick:(UIButton *)btn{
+    NSString *urlString;
+    if (btn.tag==1) {
+        //贴吧
+        urlString =@"http://tieba.baidu.com/f?kw=%B9%B7%B9%B7&fr=ala0&tpl=5";
+    }else if (btn.tag==2){
+        //宠物医院
+        urlString=@"https://baike.baidu.com/item/%E5%AE%A0%E7%89%A9%E5%8C%BB%E9%99%A2/8711885?fr=aladdin";
     }
-    homeReusableView *view =  [collectionView dequeueReusableSupplementaryViewOfKind :kind withReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    if ([kind isEqualToString:UICollectionElementKindSectionHeader]){
-        dogModel *model=_arrayType[_indexModel];
-        view.name.text=model.name;
-    }
-    
-    return view;
-}
-//返回头headerView的大小
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
-    
-    
-    CGSize size={self.view.frame.size.width,30};
-    return size;
-}
-
-//返回区数
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 1;
-}
-//每区返回的行数
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    if (_arrayDogs!=nil) {
-        return _arrayDogs.count;
-    }
-    return 0;
-}
-//构建单元格
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    homeCell *cell =[collectionView dequeueReusableCellWithReuseIdentifier:@"123" forIndexPath:indexPath];
-    cell.backgroundColor=[DataSource colorWithHexString:@"f5f5f5"];
-    [DataSource SetRoundedCorners:cell.contentView Angle:6];
-    UIView *bjView=[[UIView alloc]init];
-    bjView.backgroundColor=[UIColor whiteColor];
-    [DataSource SetRoundedCorners:bjView Angle:6];
-    [cell.contentView addSubview:bjView];
-    bjView.frame=CGRectMake(0, 0, 70, 100);
-    
-    
-    UIImageView *_dogPhoto=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 70, 70)];
-    [DataSource SetRoundedCorners:_dogPhoto Angle:6];
-    //设置图片不变形剪切出最适合的一段
-    _dogPhoto.contentMode =  UIViewContentModeScaleAspectFill;
-    [cell.contentView addSubview:_dogPhoto];
-   
-    MyLabel *_dogName=[[MyLabel alloc]initWithFrame:CGRectMake(5, 71, 60, 29)];
-    _dogName.verticalAlignment=VerticalAlignmentTop;
-    _dogName.textColor=[DataSource colorWithHexString:@"737373"];
-    _dogName.font=[UIFont systemFontOfSize:12];
-    _dogName.numberOfLines=2;
-    _dogName.backgroundColor=[UIColor whiteColor];
-    [cell.contentView addSubview:_dogName];
-    if (_arrayDogs.count>indexPath.row) {
-        dogModel *model=_arrayDogs[indexPath.row];
-        [_dogPhoto sd_setImageWithURL:[NSURL URLWithString:model.PhotoAddress]];
-        _dogName.text=model.name;
-    }
-    
-    return cell;
-}
-
-//点击cell 执行该方法
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    if (_arrayDogs.count>indexPath.row) {
-        dogModel *dog=_arrayDogs[indexPath.row];
-        if (dog.BaiKeUrlStr!=nil) {
-            WebViewController *webCtrl=[[WebViewController alloc]init];
-            webCtrl.urlString=dog.BaiKeUrlStr;
-            [self.navigationController pushViewController:webCtrl animated:YES];
-        }
-    }
-    
-}
--(CGSize)collectionView:(nonnull UICollectionView *)collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(nonnull NSIndexPath *)indexPath
-{
-    CGSize size =CGSizeMake(70, 100);
-    return size;
-}
-#pragma mark 刷新数据
--(void)relodDatas{
-    WEAKSELF
-    [DataSource getDogsList:_arrayType[_indexModel] index:_indexModel block:^(NSMutableArray *dogArray) {
-        _arrayDogs=dogArray;
-        [_tableView reloadData];
-        [weakSelf.collectionView reloadData];
-    }];
+    self.hidesBottomBarWhenPushed=YES;
+    WebViewController *webCtrl=[[WebViewController alloc]init];
+    webCtrl.urlString=urlString;
+    [self.navigationController pushViewController:webCtrl animated:YES];
+    self.hidesBottomBarWhenPushed=NO;
     
 }
 - (void)didReceiveMemoryWarning {

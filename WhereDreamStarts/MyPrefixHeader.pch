@@ -9,27 +9,24 @@
 #ifndef MyPrefixHeader_pch
 #define MyPrefixHeader_pch
 
-//键盘弹起
+/**键盘弹起*/
 #import "IQKeyboardManager.h"
-
-/*
- *第三方请求类
- */
+/**第三方请求类*/
 #import "AFNetworking.h"
 #import "AFHTTPSessionManager.h"
 #import "UIKit+AFNetworking.h"
-/*
- *第三方适配
- */
+/**第三方适配*/
 #import "SDAutoLayout.h"
-
-/*
- *三级缓存(图片以及按钮)
- */
+/**三级缓存(图片以及按钮)**/
 #import "UIImageView+WebCache.h"//image图片
 #import <UIButton+WebCache.h>//按钮图片
 /**加载提示**/
 #import "FTIndicator.h"
+/**空cell**/
+#import "NULLCell.h"
+/**第三方滚动视图**/
+#import "SDCycleScrollView.h"
+
 /*数据源*/
 #import "DataSource.h"
 /*狗狗模型类*/
@@ -38,13 +35,21 @@
 #import "MyLabel.h"
 /*网页加载*/
 #import "WebViewController.h"
-/**分类**/
+/*分类*/
 #import "ClassificationViewController.h"
 /*个人中心*/
 #import "peopleCenterViewController.h"
 
 
 #define WEAKSELF  __weak __typeof__(self) weakSelf = self;
+//创建cell
+#define Cell_init(identifier,cellObject) static NSString *string=identifier;\
+cellObject *cell=[tableView dequeueReusableCellWithIdentifier:string];\
+if (!cell) {\
+cell=[[cellObject alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:string];\
+}
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
 /*
 [FTIndicator showProgressWithmessage:@"正在加载"];
 [FTIndicator showToastMessage:@"底部弹出"];
@@ -56,6 +61,11 @@
 [FTIndicator dismissToast];
 [FTIndicator dismissNotification];
 */
+//设置图片不变形剪切出最适合的一段
+/**
+_imgView.contentMode =  UIViewContentModeScaleAspectFill;
+_imgView.clipsToBounds  = YES;
+ **/
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
