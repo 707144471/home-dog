@@ -35,7 +35,7 @@
         _yiYuanBtn.tag=2;
         [self.contentView addSubview:_yiYuanBtn];
         _yiYuanBtn.sd_layout.rightSpaceToView(self.contentView, 10).topSpaceToView(self.contentView, 10).widthIs(WIDTH/2-20).bottomSpaceToView(self.contentView, 10);
-        [_yiYuanBtn setTitle:@"狗狗医院" forState:UIControlStateNormal];
+        [_yiYuanBtn setTitle:@"狗狗简介" forState:UIControlStateNormal];
         _yiYuanBtn.imageView.contentMode =  UIViewContentModeScaleAspectFill;
         [_yiYuanBtn setBackgroundImage:[UIImage imageNamed:@"003"] forState:UIControlStateNormal];
         [DataSource SetRoundedCorners:_yiYuanBtn Angle:5];

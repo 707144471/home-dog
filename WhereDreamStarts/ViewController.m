@@ -13,10 +13,13 @@
 #import "homeTableViewCell.h"
 #import "ScrollViewCell.h"
 #import "IntroductionCell.h"
+#import "DescribeCell.h"
+#import "AdaptiveViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *_tableView;
     NSArray *_arrayType;
+    NSArray *_modelArray;//内容描述
 }
 
 @end
@@ -73,6 +76,11 @@
     [self.view addSubview:_tableView];
     _tableView.sd_layout.leftSpaceToView(self.view, 0).topSpaceToView(self.view, 0).rightSpaceToView(self.view, 0).bottomSpaceToView(self.view, 0);
 
+    
+    [DataSource addModelArrayDatas_block:^(NSMutableArray *dogArray) {
+        _modelArray=dogArray;
+        [_tableView reloadData];
+    }];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row==0) {
@@ -80,14 +88,36 @@
     }else if (indexPath.row==1){
         return 70;
     }
-    return 0;
+    return 70;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
-    return 2;
+    return _modelArray.count+2;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row>1) {
+        //进入寿命排行
+        self.hidesBottomBarWhenPushed=YES;
+        AdaptiveViewController *Adaptive=[[AdaptiveViewController alloc]init];
+        if (_modelArray.count>indexPath.row-2) {
+            Adaptive.model=_modelArray[indexPath.row-2];
+        }
+        if (indexPath.row==2) {
+            Adaptive.titleStr=@"寿命排行";
+        }else if (indexPath.row==3){
+            Adaptive.titleStr=@"世界犬种智商排行";
+        }else if (indexPath.row==4){
+            Adaptive.titleStr=@"驯养常识";
+        }else if (indexPath.row==5){
+            Adaptive.titleStr=@"医疗常识";
+        }else if (indexPath.row==6){
+            Adaptive.titleStr=@"学习才艺";
+        }
+        
+        [self.navigationController pushViewController:Adaptive animated:YES];
+        self.hidesBottomBarWhenPushed=NO;
+    }
 
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -101,12 +131,15 @@
         return cell;
         
     }else{
-        Cell_init(@"nullcell", NULLCell)
+        Cell_init(@"DescribeCell", DescribeCell)
+        if (_modelArray.count>indexPath.row-2) {
+            cell.model=_modelArray[indexPath.row-2];
+        }
         return cell;
     }
 
 }
-#pragma mark 用户点击贴吧或者医院执行该方法
+#pragma mark 用户点击贴吧或者简介执行该方法
 -(void)onTieBaYiYuanClick:(UIButton *)btn{
     NSString *urlString;
     if (btn.tag==1) {
@@ -114,7 +147,7 @@
         urlString =@"http://tieba.baidu.com/f?kw=%B9%B7%B9%B7&fr=ala0&tpl=5";
     }else if (btn.tag==2){
         //宠物医院
-        urlString=@"https://baike.baidu.com/item/%E5%AE%A0%E7%89%A9%E5%8C%BB%E9%99%A2/8711885?fr=aladdin";
+        urlString=@"https://baike.baidu.com/item/%E7%8B%97/85474?fr=aladdin";
     }
     self.hidesBottomBarWhenPushed=YES;
     WebViewController *webCtrl=[[WebViewController alloc]init];

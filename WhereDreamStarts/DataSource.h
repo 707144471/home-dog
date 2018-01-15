@@ -22,4 +22,6 @@
 +(void)CurrentInterface:(CALayer *)layer time:(float)timeValue timingFunction:(CAMediaTimingFunction *)timingFunction type:(NSString *)type subtype:(NSString *)subtype;
 #pragma mark 进入个人中心
 +(void)goPeopleCenter:(UIViewController *)viewCtrl;
+#pragma mark 添加首页model数组数据
++(void)addModelArrayDatas_block:(void(^)(NSMutableArray *dogArray))block;
 @end

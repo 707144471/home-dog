@@ -39,6 +39,8 @@
 #import "ClassificationViewController.h"
 /*个人中心*/
 #import "peopleCenterViewController.h"
+/*狗狗简介*/
+#import "DogIntroducedModel.h"
 
 
 #define WEAKSELF  __weak __typeof__(self) weakSelf = self;
