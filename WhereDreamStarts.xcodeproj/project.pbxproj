@@ -62,6 +62,8 @@
 		9D369CF4200CABF60042FC34 /* scroll001.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CF1200CABF60042FC34 /* scroll001.png */; };
 		9D369CF5200CABF60042FC34 /* scroll002.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CF2200CABF60042FC34 /* scroll002.png */; };
 		9D369CF9200CADF10042FC34 /* scroll004.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CF7200CADF10042FC34 /* scroll004.png */; };
+		9D369CFC200CB1EE0042FC34 /* peopleCencer001.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CFB200CB1EE0042FC34 /* peopleCencer001.png */; };
+		9D369D00200CB2970042FC34 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D369CFF200CB2970042FC34 /* AboutViewController.m */; };
 		9DDA4F7E2007436C00EC8C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F7D2007436C00EC8C35 /* main.m */; };
 		9DDA4F812007436C00EC8C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F802007436C00EC8C35 /* AppDelegate.m */; };
 		9DDA4F842007436C00EC8C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F832007436C00EC8C35 /* ViewController.m */; };
@@ -198,6 +200,9 @@
 		9D369CF1200CABF60042FC34 /* scroll001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll001.png; sourceTree = "<group>"; };
 		9D369CF2200CABF60042FC34 /* scroll002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll002.png; sourceTree = "<group>"; };
 		9D369CF7200CADF10042FC34 /* scroll004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll004.png; sourceTree = "<group>"; };
+		9D369CFB200CB1EE0042FC34 /* peopleCencer001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peopleCencer001.png; sourceTree = "<group>"; };
+		9D369CFE200CB2970042FC34 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		9D369CFF200CB2970042FC34 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		9DDA4F792007436C00EC8C35 /* WhereDreamStarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereDreamStarts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDA4F7D2007436C00EC8C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DDA4F7F2007436C00EC8C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -412,6 +417,7 @@
 				386F53DB200B397E00517CA6 /* icon_yanzheng.png */,
 				386F53D9200B397E00517CA6 /* icon_yanzheng@2x.png */,
 				386F53DA200B397E00517CA6 /* icon_yanzheng@3x.png */,
+				9D369CFB200CB1EE0042FC34 /* peopleCencer001.png */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -473,6 +479,15 @@
 				9D369CDB200C9C6A0042FC34 /* TalkingData.h */,
 			);
 			name = TalkingData;
+			sourceTree = "<group>";
+		};
+		9D369CFD200CB2800042FC34 /* 关于 */ = {
+			isa = PBXGroup;
+			children = (
+				9D369CFE200CB2970042FC34 /* AboutViewController.h */,
+				9D369CFF200CB2970042FC34 /* AboutViewController.m */,
+			);
+			name = "关于";
 			sourceTree = "<group>";
 		};
 		9DDA4F702007436C00EC8C35 = {
@@ -603,6 +618,7 @@
 				9DDA4FEF2007524B00EC8C35 /* PeopleIsChildCenter.m */,
 				9DDA4FF12007590400EC8C35 /* myHeadView.h */,
 				9DDA4FF22007590400EC8C35 /* myHeadView.m */,
+				9D369CFD200CB2800042FC34 /* 关于 */,
 			);
 			name = "个人中心";
 			sourceTree = "<group>";
@@ -791,6 +807,7 @@
 				9DDA4FE220074FDF00EC8C35 /* icon_jubao_dashizhuye@2x.png in Resources */,
 				386F53C0200B33FE00517CA6 /* ImageAsserts.bundle in Resources */,
 				386F53F0200B470B00517CA6 /* 002.png in Resources */,
+				9D369CFC200CB1EE0042FC34 /* peopleCencer001.png in Resources */,
 				9DDA4FFE20076C5E00EC8C35 /* icon_right@3x.png in Resources */,
 				9D369CC7200C76420042FC34 /* 009.png in Resources */,
 				9D369CC9200C76420042FC34 /* 011.png in Resources */,
@@ -934,6 +951,7 @@
 				9DDA4F812007436C00EC8C35 /* AppDelegate.m in Sources */,
 				9D369CD2200C85B20042FC34 /* AdaptiveCell.m in Sources */,
 				386F53BE200B33FE00517CA6 /* FTIndicator.m in Sources */,
+				9D369D00200CB2970042FC34 /* AboutViewController.m in Sources */,
 				381CC3462009C8A200DD8ABA /* homeCell.m in Sources */,
 				386F53EC200B422300517CA6 /* IntroductionCell.m in Sources */,
 				9DDA4F7E2007436C00EC8C35 /* main.m in Sources */,

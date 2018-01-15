@@ -9,6 +9,7 @@
 #import "peopleCenterViewController.h"
 #import "myHeadView.h"
 #import "peopleCenterCell.h"
+#import "AboutViewController.h"
 @interface peopleCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
 
@@ -87,6 +88,10 @@
         webCtrl.urlString=_urlArray[indexPath.row];
         webCtrl.redirect=YES;
         [self.navigationController pushViewController:webCtrl animated:YES];
+    }else{
+        //关于
+        AboutViewController *About=[[AboutViewController alloc]init];
+        [self.navigationController pushViewController:About animated:YES];
     }
 }
 - (void)didReceiveMemoryWarning {

@@ -21,8 +21,8 @@
     if ([super initWithFrame:frame]) {
         self.backgroundColor=[UIColor whiteColor];
         _headBtn=[UIButton buttonWithType:UIButtonTypeCustom];
-        [_headBtn.imageView.layer setBorderColor:[[UIColor redColor]colorWithAlphaComponent:0.40].CGColor];
-        [_headBtn.imageView.layer setBorderWidth:4];
+        [_headBtn.imageView.layer setBorderColor:[UIColor darkGrayColor].CGColor];
+        [_headBtn.imageView.layer setBorderWidth:2];
         [_headBtn.imageView.layer setMasksToBounds:YES];
         _headBtn.imageView.layer.cornerRadius = 50;
         //设置图片不变形剪切出最适合的一段
@@ -43,7 +43,7 @@
     _headBtn.imageView.sd_layout.leftSpaceToView(_headBtn, 25).topSpaceToView(_headBtn, 0).widthIs(100).heightIs(100);
     _headBtn.titleLabel.sd_layout.leftSpaceToView(_headBtn, 0).topSpaceToView(_headBtn.imageView, 3).widthIs(150).heightIs(33);
     //[_headBtn sd_setImageWithURL:[NSURL URLWithString:@""] forState:UIControlStateNormal];
-    [_headBtn setImage:[UIImage imageNamed:@"touXiang"] forState:UIControlStateNormal];
+    [_headBtn setImage:[UIImage imageNamed:@"013"] forState:UIControlStateNormal];
     [_headBtn setTitle:@"狗狗百科" forState:UIControlStateNormal];
 }
 @end
