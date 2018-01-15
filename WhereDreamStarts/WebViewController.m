@@ -31,7 +31,6 @@
     // Do any additional setup after loading the view.
 }
 - (void)webViewDidStartLoad:(UIWebView *)webView{
-    
     NSLog(@"开始加载了");
     [FTIndicator showProgressWithmessage:@"正在加载"];
 }
@@ -40,6 +39,9 @@
     NSLog(@"结束加载了");
     [FTIndicator dismissProgress];
 }
+
+
+
 -(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];

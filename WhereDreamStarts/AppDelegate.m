@@ -64,7 +64,6 @@
 }
 #pragma mark点击tabBar上按钮时触发
 - (void)tabBarController:(UITabBarController*)tabBarController didSelectViewController:(UIViewController*)viewController{
-    NSLog(@"==%@",viewController);
     UINavigationController*navc = (UINavigationController*)viewController;
     navc.tabBarItem.badgeValue= nil;
 }
