@@ -7,7 +7,7 @@
 //
 
 #import "WebViewController.h"
-
+#import "ChongDingXiangViewController.h"
 @interface WebViewController ()<UIWebViewDelegate>
 
 @end
@@ -24,7 +24,15 @@
             web.delegate=self;
             [self.view addSubview:web];
             web.frame=self.view.bounds;
-            [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]]];
+
+            [ChongDingXiangViewController initWithPath:self.urlString completion:^(NSURL *url, NSError *error) {
+            
+                [web loadRequest:[NSURLRequest requestWithURL:url]];
+                               
+            } error:^(NSError *error) {
+                
+            }];
+           
         }
     }
     

@@ -36,6 +36,7 @@
 		386F53F0200B470B00517CA6 /* 002.png in Resources */ = {isa = PBXBuildFile; fileRef = 386F53EE200B470A00517CA6 /* 002.png */; };
 		386F53F2200B47C600517CA6 /* 003.png in Resources */ = {isa = PBXBuildFile; fileRef = 386F53F1200B47C600517CA6 /* 003.png */; };
 		39741246F8FDA7B73051AA8C /* libPods-WhereDreamStarts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5246F11A01DF2BE89BED15A /* libPods-WhereDreamStarts.a */; };
+		9D369CBB200C59850042FC34 /* ChongDingXiangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D369CBA200C59850042FC34 /* ChongDingXiangViewController.m */; };
 		9DDA4F7E2007436C00EC8C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F7D2007436C00EC8C35 /* main.m */; };
 		9DDA4F812007436C00EC8C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F802007436C00EC8C35 /* AppDelegate.m */; };
 		9DDA4F842007436C00EC8C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F832007436C00EC8C35 /* ViewController.m */; };
@@ -140,6 +141,8 @@
 		386F53F1200B47C600517CA6 /* 003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 003.png; sourceTree = "<group>"; };
 		6C2FD1B2F5745D100890D92E /* Pods-WhereDreamStarts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereDreamStarts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereDreamStarts/Pods-WhereDreamStarts.debug.xcconfig"; sourceTree = "<group>"; };
 		99AFFF054D1A973B4E41A863 /* Pods-WhereDreamStarts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereDreamStarts.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereDreamStarts/Pods-WhereDreamStarts.release.xcconfig"; sourceTree = "<group>"; };
+		9D369CB9200C59850042FC34 /* ChongDingXiangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChongDingXiangViewController.h; sourceTree = "<group>"; };
+		9D369CBA200C59850042FC34 /* ChongDingXiangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChongDingXiangViewController.m; sourceTree = "<group>"; };
 		9DDA4F792007436C00EC8C35 /* WhereDreamStarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereDreamStarts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDA4F7D2007436C00EC8C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DDA4F7F2007436C00EC8C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -250,6 +253,7 @@
 			children = (
 				386F53A9200B19AC00517CA6 /* WebViewController.h */,
 				386F53AA200B19AC00517CA6 /* WebViewController.m */,
+				9D369CB8200C59850042FC34 /* 重定向 */,
 			);
 			name = "网页加载";
 			sourceTree = "<group>";
@@ -345,6 +349,15 @@
 				99AFFF054D1A973B4E41A863 /* Pods-WhereDreamStarts.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D369CB8200C59850042FC34 /* 重定向 */ = {
+			isa = PBXGroup;
+			children = (
+				9D369CB9200C59850042FC34 /* ChongDingXiangViewController.h */,
+				9D369CBA200C59850042FC34 /* ChongDingXiangViewController.m */,
+			);
+			path = "重定向";
 			sourceTree = "<group>";
 		};
 		9DDA4F702007436C00EC8C35 = {
@@ -762,6 +775,7 @@
 				9DDA50052008476800EC8C35 /* XLSphereView.m in Sources */,
 				9DDA4FB420074A6F00EC8C35 /* JYJBaseNavigationController.m in Sources */,
 				9DDA500920084B2F00EC8C35 /* DataSource.m in Sources */,
+				9D369CBB200C59850042FC34 /* ChongDingXiangViewController.m in Sources */,
 				381CC3432009C85600DD8ABA /* homeReusableView.m in Sources */,
 				9DDA500C2008550700EC8C35 /* dogModel.m in Sources */,
 				9DDA4FB520074A6F00EC8C35 /* JYJNavigationController.m in Sources */,

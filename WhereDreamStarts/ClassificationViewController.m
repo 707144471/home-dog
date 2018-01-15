@@ -180,10 +180,10 @@
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     if (_arrayDogs.count>indexPath.row) {
         dogModel *dog=_arrayDogs[indexPath.row];
-        if (dog.BaiKeUrlStr!=nil) {
+        if (dog.name!=nil) {
             self.hidesBottomBarWhenPushed=YES;
             WebViewController *webCtrl=[[WebViewController alloc]init];
-            webCtrl.urlString=dog.BaiKeUrlStr;
+            webCtrl.urlString=[NSString stringWithFormat:@"https://baike.baidu.com/item/%@",dog.name];
             [self.navigationController pushViewController:webCtrl animated:YES];
             self.hidesBottomBarWhenPushed=NO;
         }
