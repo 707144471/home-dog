@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "JYJNavigationController.h"
 #import "ViewController.h"
+#import "TalkingData.h"
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
@@ -21,6 +22,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     self.window.backgroundColor =[UIColor whiteColor];
+    [TalkingData sessionStarted:@"3A4689E2B4A4407FA29C892BEE01B244" withChannelId:@"ios狗狗百科"];
     
     // 设置窗口的根控制器
     /*

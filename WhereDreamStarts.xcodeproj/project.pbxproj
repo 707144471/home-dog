@@ -48,6 +48,14 @@
 		9D369CCF200C81850042FC34 /* DogIntroducedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D369CCE200C81850042FC34 /* DogIntroducedModel.m */; };
 		9D369CD2200C85B20042FC34 /* AdaptiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D369CD1200C85B20042FC34 /* AdaptiveCell.m */; };
 		9D369CD8200C860C0042FC34 /* AdaptiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D369CD7200C860C0042FC34 /* AdaptiveViewController.m */; };
+		9D369CDC200C9C6A0042FC34 /* libTalkingData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D369CDA200C9C6A0042FC34 /* libTalkingData.a */; };
+		9D369CDE200C9C8D0042FC34 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D369CDD200C9C8D0042FC34 /* AdSupport.framework */; };
+		9D369CE0200C9C940042FC34 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D369CDF200C9C940042FC34 /* CoreTelephony.framework */; };
+		9D369CE2200C9C9B0042FC34 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D369CE1200C9C9B0042FC34 /* CoreMotion.framework */; };
+		9D369CE4200C9CA10042FC34 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D369CE3200C9CA10042FC34 /* Security.framework */; };
+		9D369CE6200C9CA70042FC34 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D369CE5200C9CA70042FC34 /* SystemConfiguration.framework */; };
+		9D369CE8200C9CAF0042FC34 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D369CE7200C9CAF0042FC34 /* libz.tbd */; };
+		9D369CEA200C9CBC0042FC34 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D369CE9200C9CBC0042FC34 /* libc++.tbd */; };
 		9DDA4F7E2007436C00EC8C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F7D2007436C00EC8C35 /* main.m */; };
 		9DDA4F812007436C00EC8C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F802007436C00EC8C35 /* AppDelegate.m */; };
 		9DDA4F842007436C00EC8C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F832007436C00EC8C35 /* ViewController.m */; };
@@ -169,6 +177,15 @@
 		9D369CD1200C85B20042FC34 /* AdaptiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdaptiveCell.m; sourceTree = "<group>"; };
 		9D369CD6200C860C0042FC34 /* AdaptiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveViewController.h; sourceTree = "<group>"; };
 		9D369CD7200C860C0042FC34 /* AdaptiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdaptiveViewController.m; sourceTree = "<group>"; };
+		9D369CDA200C9C6A0042FC34 /* libTalkingData.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingData.a; sourceTree = "<group>"; };
+		9D369CDB200C9C6A0042FC34 /* TalkingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingData.h; sourceTree = "<group>"; };
+		9D369CDD200C9C8D0042FC34 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		9D369CDF200C9C940042FC34 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		9D369CE1200C9C9B0042FC34 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		9D369CE3200C9CA10042FC34 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9D369CE5200C9CA70042FC34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9D369CE7200C9CAF0042FC34 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9D369CE9200C9CBC0042FC34 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		9DDA4F792007436C00EC8C35 /* WhereDreamStarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereDreamStarts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDA4F7D2007436C00EC8C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DDA4F7F2007436C00EC8C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -241,7 +258,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D369CEA200C9CBC0042FC34 /* libc++.tbd in Frameworks */,
+				9D369CE8200C9CAF0042FC34 /* libz.tbd in Frameworks */,
+				9D369CE6200C9CA70042FC34 /* SystemConfiguration.framework in Frameworks */,
+				9D369CE4200C9CA10042FC34 /* Security.framework in Frameworks */,
+				9D369CE2200C9C9B0042FC34 /* CoreMotion.framework in Frameworks */,
+				9D369CE0200C9C940042FC34 /* CoreTelephony.framework in Frameworks */,
+				9D369CDE200C9C8D0042FC34 /* AdSupport.framework in Frameworks */,
 				381CC3482009CAFA00DD8ABA /* MobileCoreServices.framework in Frameworks */,
+				9D369CDC200C9C6A0042FC34 /* libTalkingData.a in Frameworks */,
 				39741246F8FDA7B73051AA8C /* libPods-WhereDreamStarts.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +448,15 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		9D369CD9200C9C550042FC34 /* TalkingData */ = {
+			isa = PBXGroup;
+			children = (
+				9D369CDA200C9C6A0042FC34 /* libTalkingData.a */,
+				9D369CDB200C9C6A0042FC34 /* TalkingData.h */,
+			);
+			name = TalkingData;
+			sourceTree = "<group>";
+		};
 		9DDA4F702007436C00EC8C35 = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +485,7 @@
 				9DDA4F7F2007436C00EC8C35 /* AppDelegate.h */,
 				9DDA4F802007436C00EC8C35 /* AppDelegate.m */,
 				9DDA4FF4200762F400EC8C35 /* MyPrefixHeader.pch */,
+				9D369CD9200C9C550042FC34 /* TalkingData */,
 				386F53B1200B33FE00517CA6 /* FTIndicator */,
 				386F53AD200B230F00517CA6 /* 分类 */,
 				386F53AC200B230500517CA6 /* 首页 */,
@@ -604,6 +639,13 @@
 		ABBF627182679A232793331F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D369CE9200C9CBC0042FC34 /* libc++.tbd */,
+				9D369CE7200C9CAF0042FC34 /* libz.tbd */,
+				9D369CE5200C9CA70042FC34 /* SystemConfiguration.framework */,
+				9D369CE3200C9CA10042FC34 /* Security.framework */,
+				9D369CE1200C9C9B0042FC34 /* CoreMotion.framework */,
+				9D369CDF200C9C940042FC34 /* CoreTelephony.framework */,
+				9D369CDD200C9C8D0042FC34 /* AdSupport.framework */,
 				381CC3472009CAF100DD8ABA /* MobileCoreServices.framework */,
 				C5246F11A01DF2BE89BED15A /* libPods-WhereDreamStarts.a */,
 			);
@@ -1030,6 +1072,10 @@
 				INFOPLIST_FILE = WhereDreamStarts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WhereDreamStarts",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MrHan.2018.WhereDreamStarts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1045,6 +1091,10 @@
 				INFOPLIST_FILE = WhereDreamStarts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WhereDreamStarts",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MrHan.2018.WhereDreamStarts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
