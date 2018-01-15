@@ -663,37 +663,11 @@
     block(allArray);
     
 }
-/*
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- @"",
- */
+
 #pragma mark 进入个人中心
 +(void)goPeopleCenter:(UIViewController *)viewCtrl{
     
-    [DataSource CurrentInterface:viewCtrl.view.window.layer time:0.4 timingFunction:UIViewAnimationCurveEaseInOut type:kCATransitionFade subtype:kCATransitionFromLeft];
+    [DataSource CurrentInterface:viewCtrl.view.window.layer time:0.3 timingFunction:UIViewAnimationCurveEaseInOut type:kCATransitionFade subtype:kCATransitionFromLeft];
     peopleCenterViewController *myViewCtrol=[[peopleCenterViewController alloc]init];
     UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:myViewCtrol];
     nav.modalPresentationStyle = UIModalPresentationOverFullScreen;

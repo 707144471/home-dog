@@ -184,6 +184,7 @@
             self.hidesBottomBarWhenPushed=YES;
             WebViewController *webCtrl=[[WebViewController alloc]init];
             webCtrl.urlString=[NSString stringWithFormat:@"https://baike.baidu.com/item/%@",dog.name];
+            webCtrl.redirect=YES;
             [self.navigationController pushViewController:webCtrl animated:YES];
             self.hidesBottomBarWhenPushed=NO;
         }

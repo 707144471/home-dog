@@ -11,4 +11,6 @@
 @interface WebViewController : UIViewController
 //网址
 @property(nonatomic,copy)NSString *urlString;
+//是否需要重定向
+@property(nonatomic,assign)BOOL redirect;
 @end

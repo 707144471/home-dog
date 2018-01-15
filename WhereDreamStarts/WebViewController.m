@@ -24,15 +24,16 @@
             web.delegate=self;
             [self.view addSubview:web];
             web.frame=self.view.bounds;
-
-            [ChongDingXiangViewController initWithPath:self.urlString completion:^(NSURL *url, NSError *error) {
+            if (self.redirect) {
+                [ChongDingXiangViewController initWithPath:self.urlString completion:^(NSURL *url, NSError *error) {
+                    [web loadRequest:[NSURLRequest requestWithURL:url]];
+                } error:^(NSError *error) {
+                    
+                }];
+            }else{
+                [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]]];
+            }
             
-                [web loadRequest:[NSURLRequest requestWithURL:url]];
-                               
-            } error:^(NSError *error) {
-                
-            }];
-           
         }
     }
     
