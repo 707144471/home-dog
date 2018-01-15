@@ -54,10 +54,10 @@
     
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumInteritemSpacing = 10;
+    flowLayout.minimumInteritemSpacing = 15;
     flowLayout.minimumLineSpacing = 15;
     //上
-    flowLayout.sectionInset = UIEdgeInsetsMake(10, 15, 10, 15);
+    flowLayout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
     self.collectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(100, 0, self.view.frame.size.width-100, self.view.frame.size.height) collectionViewLayout:flowLayout];
     self.collectionView.backgroundColor=[DataSource colorWithHexString:@"f5f5f5"];
     self.collectionView.delegate=self;
