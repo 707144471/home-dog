@@ -23,7 +23,7 @@
             web.backgroundColor=[UIColor whiteColor];
             web.delegate=self;
             [self.view addSubview:web];
-            web.frame=self.view.bounds;
+            web.sd_layout.leftSpaceToView(self.view, 0).topSpaceToView(self.view, 0).rightSpaceToView(self.view, 0).bottomSpaceToView(self.view, 0);
             if (self.redirect) {
                 [ChongDingXiangViewController initWithPath:self.urlString completion:^(NSURL *url, NSError *error) {
                     [web loadRequest:[NSURLRequest requestWithURL:url]];
