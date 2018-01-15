@@ -285,11 +285,11 @@
 		386F53B1200B33FE00517CA6 /* FTIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				386F53BD200B33FE00517CA6 /* FTIndicator.h */,
 				386F53B2200B33FE00517CA6 /* FTIndicator.m */,
 				386F53B3200B33FE00517CA6 /* FTToastIndicator */,
 				386F53B6200B33FE00517CA6 /* FTProgressIndicator */,
 				386F53BA200B33FE00517CA6 /* FTNotificationIndicator */,
-				386F53BD200B33FE00517CA6 /* FTIndicator.h */,
 			);
 			path = FTIndicator;
 			sourceTree = "<group>";
