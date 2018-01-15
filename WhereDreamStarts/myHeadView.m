@@ -21,8 +21,8 @@
     if ([super initWithFrame:frame]) {
         self.backgroundColor=[UIColor whiteColor];
         _headBtn=[UIButton buttonWithType:UIButtonTypeCustom];
-        [_headBtn.imageView.layer setBorderColor:[UIColor darkGrayColor].CGColor];
-        [_headBtn.imageView.layer setBorderWidth:2];
+        [_headBtn.imageView.layer setBorderColor:[[UIColor redColor]colorWithAlphaComponent:0.40].CGColor];
+        [_headBtn.imageView.layer setBorderWidth:4];
         [_headBtn.imageView.layer setMasksToBounds:YES];
         _headBtn.imageView.layer.cornerRadius = 50;
         //设置图片不变形剪切出最适合的一段

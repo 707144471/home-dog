@@ -51,11 +51,11 @@
     // 标签视图控制器，用来管理导航控制器的
     UITabBarController *tabBars = [[UITabBarController alloc]init];
     // 设置背景颜色
-    tabBars.tabBar.barTintColor= [DataSource colorWithHexString:@"f6f6f6"];
+    tabBars.tabBar.barTintColor= [UIColor whiteColor];
     // 设置不半透明
     tabBars.tabBar.translucent= NO;
     // 设置选中按钮的颜色
-    tabBars.tabBar.tintColor= [DataSource colorWithHexString:@"d9a700"];
+    tabBars.tabBar.tintColor= [[UIColor redColor]colorWithAlphaComponent:0.50];
     tabBars.tabBar.unselectedItemTintColor=[DataSource colorWithHexString:@"4b4b4b"];
     
     // 给标签控制器指定子控制器

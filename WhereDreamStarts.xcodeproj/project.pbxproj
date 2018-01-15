@@ -56,6 +56,12 @@
 		9D369CE6200C9CA70042FC34 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D369CE5200C9CA70042FC34 /* SystemConfiguration.framework */; };
 		9D369CE8200C9CAF0042FC34 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D369CE7200C9CAF0042FC34 /* libz.tbd */; };
 		9D369CEA200C9CBC0042FC34 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D369CE9200C9CBC0042FC34 /* libc++.tbd */; };
+		9D369CEE200CAAD00042FC34 /* icon_set_mine.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CEB200CAAD00042FC34 /* icon_set_mine.png */; };
+		9D369CEF200CAAD00042FC34 /* icon_set_mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CEC200CAAD00042FC34 /* icon_set_mine@2x.png */; };
+		9D369CF0200CAAD00042FC34 /* icon_set_mine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CED200CAAD00042FC34 /* icon_set_mine@3x.png */; };
+		9D369CF4200CABF60042FC34 /* scroll001.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CF1200CABF60042FC34 /* scroll001.png */; };
+		9D369CF5200CABF60042FC34 /* scroll002.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CF2200CABF60042FC34 /* scroll002.png */; };
+		9D369CF9200CADF10042FC34 /* scroll004.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CF7200CADF10042FC34 /* scroll004.png */; };
 		9DDA4F7E2007436C00EC8C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F7D2007436C00EC8C35 /* main.m */; };
 		9DDA4F812007436C00EC8C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F802007436C00EC8C35 /* AppDelegate.m */; };
 		9DDA4F842007436C00EC8C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F832007436C00EC8C35 /* ViewController.m */; };
@@ -186,6 +192,12 @@
 		9D369CE5200C9CA70042FC34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9D369CE7200C9CAF0042FC34 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		9D369CE9200C9CBC0042FC34 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		9D369CEB200CAAD00042FC34 /* icon_set_mine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_set_mine.png; sourceTree = "<group>"; };
+		9D369CEC200CAAD00042FC34 /* icon_set_mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_set_mine@2x.png"; sourceTree = "<group>"; };
+		9D369CED200CAAD00042FC34 /* icon_set_mine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_set_mine@3x.png"; sourceTree = "<group>"; };
+		9D369CF1200CABF60042FC34 /* scroll001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll001.png; sourceTree = "<group>"; };
+		9D369CF2200CABF60042FC34 /* scroll002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll002.png; sourceTree = "<group>"; };
+		9D369CF7200CADF10042FC34 /* scroll004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll004.png; sourceTree = "<group>"; };
 		9DDA4F792007436C00EC8C35 /* WhereDreamStarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereDreamStarts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDA4F7D2007436C00EC8C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DDA4F7F2007436C00EC8C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -388,6 +400,12 @@
 				9D369CC3200C76420042FC34 /* 012.png */,
 				9D369CC4200C76420042FC34 /* 013.png */,
 				9D369CC5200C76420042FC34 /* 014.png */,
+				9D369CF1200CABF60042FC34 /* scroll001.png */,
+				9D369CF2200CABF60042FC34 /* scroll002.png */,
+				9D369CF7200CADF10042FC34 /* scroll004.png */,
+				9D369CEB200CAAD00042FC34 /* icon_set_mine.png */,
+				9D369CEC200CAAD00042FC34 /* icon_set_mine@2x.png */,
+				9D369CED200CAAD00042FC34 /* icon_set_mine@3x.png */,
 				386F53D7200B397E00517CA6 /* icon_username.png */,
 				386F53D8200B397E00517CA6 /* icon_username@2x.png */,
 				386F53D6200B397E00517CA6 /* icon_username@3x.png */,
@@ -764,6 +782,7 @@
 				9D369CCA200C76420042FC34 /* 012.png in Resources */,
 				9DDA4FD620074F9300EC8C35 /* icon_dashang_change@2x.png in Resources */,
 				9DDA4F8C2007436C00EC8C35 /* LaunchScreen.storyboard in Resources */,
+				9D369CF9200CADF10042FC34 /* scroll004.png in Resources */,
 				386F53E9200B404800517CA6 /* touXiang.png in Resources */,
 				386F53D5200B38E000517CA6 /* icon_paidui_s.png in Resources */,
 				9DDA4FCF20074F4800EC8C35 /* icon_wendao_name.png in Resources */,
@@ -775,6 +794,7 @@
 				9DDA4FFE20076C5E00EC8C35 /* icon_right@3x.png in Resources */,
 				9D369CC7200C76420042FC34 /* 009.png in Resources */,
 				9D369CC9200C76420042FC34 /* 011.png in Resources */,
+				9D369CF0200CAAD00042FC34 /* icon_set_mine@3x.png in Resources */,
 				9DDA4FDB20074FB300EC8C35 /* icon_wenzhangxiangqing_zanshang_s.png in Resources */,
 				9DDA4FC420074E2B00EC8C35 /* icon_wendao_sousuo@2x.png in Resources */,
 				9DDA4FD520074F9300EC8C35 /* icon_dashang_change.png in Resources */,
@@ -793,13 +813,17 @@
 				386F53D4200B38E000517CA6 /* icon_paidui_s@2x.png in Resources */,
 				9D369CC6200C76420042FC34 /* 008.png in Resources */,
 				9DDA4FC320074E2B00EC8C35 /* icon_wendao_sousuo.png in Resources */,
+				9D369CEE200CAAD00042FC34 /* icon_set_mine.png in Resources */,
+				9D369CEF200CAAD00042FC34 /* icon_set_mine@2x.png in Resources */,
 				386F53D3200B38E000517CA6 /* icon_paidui_s@3x.png in Resources */,
 				9DDA4F892007436C00EC8C35 /* Assets.xcassets in Resources */,
 				9DDA4FC520074E2B00EC8C35 /* icon_wendao_sousuo@3x.png in Resources */,
 				386F53EF200B470B00517CA6 /* 001.png in Resources */,
 				9DDA4F872007436C00EC8C35 /* Main.storyboard in Resources */,
+				9D369CF4200CABF60042FC34 /* scroll001.png in Resources */,
 				9DDA4FFD20076C5E00EC8C35 /* icon_right@2x.png in Resources */,
 				9DDA4FD020074F4800EC8C35 /* icon_wendao_name@2x.png in Resources */,
+				9D369CF5200CABF60042FC34 /* scroll002.png in Resources */,
 				9DDA4FBD20074DE600EC8C35 /* icon_dashizhuye_more.png in Resources */,
 				386F53F2200B47C600517CA6 /* 003.png in Resources */,
 				386F53DF200B397E00517CA6 /* icon_yanzheng@2x.png in Resources */,

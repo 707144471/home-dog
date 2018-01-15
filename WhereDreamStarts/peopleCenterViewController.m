@@ -14,6 +14,7 @@
 
     UITableView *_tableView;
     NSArray *_nameArray;
+    NSArray *_urlArray;
 }
 @end
 
@@ -22,7 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _nameArray=@[@"我的狗狗",@"我的收藏",@"我的订单",@"系统设置",@"联系我们"];
+    _nameArray=@[@"狗民网",@"宠物中国",@"乐乐地带",@"关于狗狗百科"];
+    _urlArray=@[@"http://bbs.goumin.com/",@"http://bbs.chinapet.com/",@"http://club.lelezone.com/",@""];
     [self setUI];
 
     
@@ -70,6 +72,9 @@
     if (!cell) {
         cell=[[peopleCenterCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:string];
     }
+    if (indexPath.row==3) {
+        //[cell.button setImage:[UIImage imageNamed:@"icon_set_mine"] forState:UIControlStateNormal];
+    }
     [cell.button setTitle:_nameArray[indexPath.row] forState:UIControlStateNormal];
 
     return cell;
@@ -77,6 +82,12 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row<3) {
+        WebViewController *webCtrl=[[WebViewController alloc]init];
+        webCtrl.urlString=_urlArray[indexPath.row];
+        webCtrl.redirect=YES;
+        [self.navigationController pushViewController:webCtrl animated:YES];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
