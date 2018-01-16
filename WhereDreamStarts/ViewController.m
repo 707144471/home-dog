@@ -35,7 +35,7 @@
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.navigationController.navigationBar.translucent = NO;
     UILabel * titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 20)] ;
-    titleLabel.text = @"家有爱宠";
+    titleLabel.text = @"家有萌宠";
     titleLabel.textAlignment=NSTextAlignmentCenter;
     self.navigationItem.titleView = titleLabel;
     [self setupNav];
