@@ -57,7 +57,7 @@
     if ([self.titleStr isEqualToString:@"寿命排行"]) {
 
         cell.str=[NSString stringWithFormat:@"第%ld名: %@",indexPath.row+1,self.model.arrayModel[indexPath.row]];
-    }else if ([self.titleStr isEqualToString:@"世界犬种智商排行"]||[self.titleStr isEqualToString:@"驯养常识"]||[self.titleStr isEqualToString:@"医疗常识"]||[self.titleStr isEqualToString:@"学习才艺"]){
+    }else if ([self.titleStr isEqualToString:@"世界犬种智商排行"]||[self.titleStr isEqualToString:@"驯养常识"]||[self.titleStr isEqualToString:@"医疗常识"]||[self.titleStr isEqualToString:@"学习才艺"]||[self.titleStr isEqualToString:@"生活习性"]){
         cell.str=[NSString stringWithFormat:@"%@",self.model.arrayModel[indexPath.row]];
     }
     return cell;

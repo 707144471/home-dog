@@ -116,6 +116,8 @@
             Adaptive.titleStr=@"医疗常识";
         }else if (indexPath.row==6){
             Adaptive.titleStr=@"学习才艺";
+        }else if (indexPath.row==7){
+            Adaptive.titleStr=@"生活习性";
         }
         
         [self.navigationController pushViewController:Adaptive animated:YES];
