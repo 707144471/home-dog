@@ -783,8 +783,8 @@
 				TargetAttributes = {
 					9DDA4F782007436C00EC8C35 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 95326Y76J2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 57H4K7W67N;
+						ProvisioningStyle = Manual;
 					};
 					9DDA4F912007436C00EC8C35 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -1072,7 +1072,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: shaolin han (57H4K7W67N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: shaolin han (57H4K7W67N)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1094,6 +1095,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "b31e0afd-c280-4009-a790-737404d055b8";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1120,7 +1122,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: shaolin han (57H4K7W67N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: shaolin han (57H4K7W67N)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1135,6 +1138,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "b31e0afd-c280-4009-a790-737404d055b8";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1145,10 +1149,12 @@
 			baseConfigurationReference = 6C2FD1B2F5745D100890D92E /* Pods-WhereDreamStarts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: shaolin han (57H4K7W67N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: shaolin han (57H4K7W67N)";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_ACTIVITY_MODE = "";
 				"DEBUG_ACTIVITY_MODE[arch=*]" = default;
-				DEVELOPMENT_TEAM = 95326Y76J2;
+				DEVELOPMENT_TEAM = 57H4K7W67N;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WhereDreamStarts/MyPrefixHeader.pch";
 				INFOPLIST_FILE = WhereDreamStarts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1159,7 +1165,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jymc2018.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b31e0afd-c280-4009-a790-737404d055b8";
+				PROVISIONING_PROFILE_SPECIFIER = "jiayoumengchong-appStore";
 			};
 			name = Debug;
 		};
@@ -1168,9 +1175,11 @@
 			baseConfigurationReference = 99AFFF054D1A973B4E41A863 /* Pods-WhereDreamStarts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: shaolin han (57H4K7W67N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: shaolin han (57H4K7W67N)";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_ACTIVITY_MODE = "";
-				DEVELOPMENT_TEAM = 95326Y76J2;
+				DEVELOPMENT_TEAM = 57H4K7W67N;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WhereDreamStarts/MyPrefixHeader.pch";
 				INFOPLIST_FILE = WhereDreamStarts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1181,7 +1190,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jymc2018.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b31e0afd-c280-4009-a790-737404d055b8";
+				PROVISIONING_PROFILE_SPECIFIER = "jiayoumengchong-appStore";
 			};
 			name = Release;
 		};
