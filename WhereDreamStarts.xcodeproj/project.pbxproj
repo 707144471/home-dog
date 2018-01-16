@@ -1118,7 +1118,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WhereDreamStarts",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MrHan.2018.WhereDreamStarts;
+				PRODUCT_BUNDLE_IDENTIFIER = "-018.WhereDreamStarts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1137,7 +1137,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WhereDreamStarts",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MrHan.2018.WhereDreamStarts;
+				PRODUCT_BUNDLE_IDENTIFIER = "-018.WhereDreamStarts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
