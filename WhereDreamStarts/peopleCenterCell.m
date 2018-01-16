@@ -23,10 +23,12 @@
         _button.titleLabel.font=[UIFont systemFontOfSize:12];
         [self.contentView addSubview:_button];
         _button.sd_layout.leftSpaceToView(self.contentView, 15).topSpaceToView(self.contentView, 10).rightSpaceToView(self.contentView, 15);
-        _button.imageView.sd_layout.leftSpaceToView(_button, 0).topSpaceToView(_button, 0).widthIs(30).heightIs(30);
+        _button.imageView.sd_layout.leftSpaceToView(_button, 0).topSpaceToView(_button, 5).widthIs(20).heightIs(20);
         _button.titleLabel.sd_layout.leftSpaceToView(_button.imageView, 3).topEqualToView(_button.imageView).rightSpaceToView(_button, 0).bottomEqualToView(_button.imageView);
         //[_button sd_setImageWithURL:[NSURL URLWithString:@"http://www.jituwang.com/uploads/allimg/150203/258887-1502031KP212.jpg"] forState:UIControlStateNormal];
-        [_button setImage:[UIImage imageNamed:@"icon_wendao_name"] forState:UIControlStateNormal];
+        [_button setImage:[UIImage imageNamed:@"link"] forState:UIControlStateNormal];
+        //_button.imageView.backgroundColor=[UIColor redColor];
+        
         
         UIImageView *img=[[UIImageView alloc]init];
         img.image=[UIImage imageNamed:@"icon_right"];

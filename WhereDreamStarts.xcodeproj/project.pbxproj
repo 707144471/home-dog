@@ -64,6 +64,9 @@
 		9D369CF9200CADF10042FC34 /* scroll004.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CF7200CADF10042FC34 /* scroll004.png */; };
 		9D369CFC200CB1EE0042FC34 /* peopleCencer001.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369CFB200CB1EE0042FC34 /* peopleCencer001.png */; };
 		9D369D00200CB2970042FC34 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D369CFF200CB2970042FC34 /* AboutViewController.m */; };
+		9D369D06200D91190042FC34 /* link.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369D03200D91190042FC34 /* link.png */; };
+		9D369D07200D91190042FC34 /* link@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369D04200D91190042FC34 /* link@3x.png */; };
+		9D369D08200D91190042FC34 /* link@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D369D05200D91190042FC34 /* link@2x.png */; };
 		9DDA4F7E2007436C00EC8C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F7D2007436C00EC8C35 /* main.m */; };
 		9DDA4F812007436C00EC8C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F802007436C00EC8C35 /* AppDelegate.m */; };
 		9DDA4F842007436C00EC8C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDA4F832007436C00EC8C35 /* ViewController.m */; };
@@ -203,6 +206,9 @@
 		9D369CFB200CB1EE0042FC34 /* peopleCencer001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peopleCencer001.png; sourceTree = "<group>"; };
 		9D369CFE200CB2970042FC34 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		9D369CFF200CB2970042FC34 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		9D369D03200D91190042FC34 /* link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = link.png; sourceTree = "<group>"; };
+		9D369D04200D91190042FC34 /* link@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "link@3x.png"; sourceTree = "<group>"; };
+		9D369D05200D91190042FC34 /* link@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "link@2x.png"; sourceTree = "<group>"; };
 		9DDA4F792007436C00EC8C35 /* WhereDreamStarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereDreamStarts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDA4F7D2007436C00EC8C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DDA4F7F2007436C00EC8C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -626,6 +632,9 @@
 		9DDA4FF820076C5000EC8C35 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				9D369D03200D91190042FC34 /* link.png */,
+				9D369D04200D91190042FC34 /* link@3x.png */,
+				9D369D05200D91190042FC34 /* link@2x.png */,
 				386F53E8200B404800517CA6 /* touXiang.png */,
 				386F53D2200B38E000517CA6 /* icon_paidui_s.png */,
 				386F53D1200B38DF00517CA6 /* icon_paidui_s@2x.png */,
@@ -756,7 +765,7 @@
 				TargetAttributes = {
 					9DDA4F782007436C00EC8C35 = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					9DDA4F912007436C00EC8C35 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -796,6 +805,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D369CCA200C76420042FC34 /* 012.png in Resources */,
+				9D369D06200D91190042FC34 /* link.png in Resources */,
 				9DDA4FD620074F9300EC8C35 /* icon_dashang_change@2x.png in Resources */,
 				9DDA4F8C2007436C00EC8C35 /* LaunchScreen.storyboard in Resources */,
 				9D369CF9200CADF10042FC34 /* scroll004.png in Resources */,
@@ -830,6 +840,7 @@
 				386F53D4200B38E000517CA6 /* icon_paidui_s@2x.png in Resources */,
 				9D369CC6200C76420042FC34 /* 008.png in Resources */,
 				9DDA4FC320074E2B00EC8C35 /* icon_wendao_sousuo.png in Resources */,
+				9D369D07200D91190042FC34 /* link@3x.png in Resources */,
 				9D369CEE200CAAD00042FC34 /* icon_set_mine.png in Resources */,
 				9D369CEF200CAAD00042FC34 /* icon_set_mine@2x.png in Resources */,
 				386F53D3200B38E000517CA6 /* icon_paidui_s@3x.png in Resources */,
@@ -846,6 +857,7 @@
 				386F53DF200B397E00517CA6 /* icon_yanzheng@2x.png in Resources */,
 				9DDA4FD120074F4800EC8C35 /* icon_wendao_name@3x.png in Resources */,
 				386F53E0200B397E00517CA6 /* icon_yanzheng@3x.png in Resources */,
+				9D369D08200D91190042FC34 /* link@2x.png in Resources */,
 				386F53DC200B397E00517CA6 /* icon_username@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1110,6 +1122,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_ACTIVITY_MODE = "";
 				"DEBUG_ACTIVITY_MODE[arch=*]" = default;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WhereDreamStarts/MyPrefixHeader.pch";
 				INFOPLIST_FILE = WhereDreamStarts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1120,6 +1133,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-018.WhereDreamStarts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1129,6 +1143,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_ACTIVITY_MODE = "";
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WhereDreamStarts/MyPrefixHeader.pch";
 				INFOPLIST_FILE = WhereDreamStarts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1139,6 +1154,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-018.WhereDreamStarts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
