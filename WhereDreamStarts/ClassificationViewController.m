@@ -27,7 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[DataSource colorWithHexString:@"f5f5f5"];
-    self.title=@"狗狗分类";
+    UILabel * titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 20)] ;
+    titleLabel.textAlignment=NSTextAlignmentCenter;
+    titleLabel.text = @"萌宠分类";
+    self.navigationItem.titleView = titleLabel;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.edgesForExtendedLayout =UIRectEdgeNone;
     // 这个方法是为了，不让隐藏状态栏的时候出现view上移

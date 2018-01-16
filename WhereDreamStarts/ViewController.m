@@ -34,7 +34,10 @@
     // 这个方法是为了，不让隐藏状态栏的时候出现view上移
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.navigationController.navigationBar.translucent = NO;
-    self.title = @"狗狗百科";
+    UILabel * titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 20)] ;
+    titleLabel.text = @"萌宠新世界";
+    titleLabel.textAlignment=NSTextAlignmentCenter;
+    self.navigationItem.titleView = titleLabel;
     [self setupNav];
     [self CreateAClassificationTable];
 

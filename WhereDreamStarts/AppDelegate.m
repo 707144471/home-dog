@@ -37,7 +37,7 @@
     //首页
     ViewController *home=[[ViewController alloc]init];
     UINavigationController *homeNav=[[UINavigationController alloc]initWithRootViewController:home];
-    homeNav.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"狗狗百科"image:[UIImage imageNamed:@"icon_username"]tag:1005];
+    homeNav.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"Of pet home page"image:[UIImage imageNamed:@"icon_wendao_xiongji"]tag:1005];
     // 提示信息
     //messageNav.tabBarItem.badgeValue= @"new";
     
@@ -45,7 +45,7 @@
     //分类
     ClassificationViewController *Classification = [[ClassificationViewController alloc]init];
     UINavigationController *ClassificationNav = [[UINavigationController alloc]initWithRootViewController:Classification];
-    ClassificationNav.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"狗狗分类"image:[UIImage imageNamed:@"icon_yanzheng"]tag:1004];
+    ClassificationNav.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"Classification of pet"image:[UIImage imageNamed:@"icon_wendao_more"]tag:1004];
     
     
     // 标签视图控制器，用来管理导航控制器的
